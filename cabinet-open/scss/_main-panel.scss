@@ -1,0 +1,40 @@
+@import "_variables.scss";
+
+.main-panel{
+    display: flex;
+    background-color: $black;
+    margin-left: 8px;
+    height: 40px;
+    margin-right: 8px;
+
+    .main-panel__logo{
+
+        >img{
+                margin-top: 13px;
+                margin-left: 15px;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: end;
+    }
+
+    .main-panel__link{
+        align-items: center;
+        display: flex;
+
+        >a{
+        margin-left: 10px;
+        color: $white;
+        text-decoration: none;
+        }
+    }
+
+    .main-panel__search{
+        align-items: center;
+        display: flex;
+    }
+}

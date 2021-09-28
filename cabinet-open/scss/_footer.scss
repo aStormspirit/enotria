@@ -1,0 +1,39 @@
+@import "_variables.scss";
+
+footer{
+    margin-top: 82px;
+    .footer{
+        display: flex;
+        margin: 70px 8px 8px 8px;
+        background-color: $black;
+
+        &__content{
+            font-family: 'Roboto Condensed', sans-serif;;
+            color: white;
+
+            >p{
+                font-weight: 400;
+            }
+
+            &_moscow{
+                margin: 16px 16px 0px 16px;
+                width: 50%;                
+
+             .title{
+                    font-size: $font-med;
+                    border-bottom: 1px solid #303233;
+                    font-weight: 700;
+                    }                
+            }
+
+            &_saintp{
+                margin: 16px 16px 0px 16px;
+                width: 50%;
+               .title{
+                    font-size: $font-med;
+                    border-bottom: 1px solid #303233;
+                    }
+            }
+        }
+    }
+}

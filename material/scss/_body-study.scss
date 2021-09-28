@@ -1,0 +1,97 @@
+.body__study{
+    margin-left: 8px;
+    margin-right: 8px;
+
+    &_card{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+}
+
+.card__info{
+    background-color: #EDF1F2;
+    padding: 8px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    &_row{
+        align-items: center;
+        
+
+        .row{
+            margin-left: 8px;
+            position: relative;
+            >p:first-child{
+                font-family: Roboto Condensed;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 48px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #F24724;
+                position: absolute;
+                top: -24px;
+            }
+
+            >p:nth-child(2){
+                font-family: Roboto Condensed;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #555859;
+            }
+        }
+    }
+
+    >div:first-child{
+        margin-left: 6px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    >div:nth-child(2){
+        display: flex;
+
+        >p:first-child{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+    }
+}
+
+.card__background{
+    >img{
+        width: 100%;
+    }
+}
+
+.button{
+    margin-top: 27px;
+    width: 100%;
+
+    >button{
+        color: white;
+        border: none;
+        background-color: #303233;
+        width: 100%;
+    }
+}
+
+}

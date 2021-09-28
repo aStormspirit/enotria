@@ -1,0 +1,74 @@
+@import "_variables.scss";
+
+.navbar {
+	display: flex;
+	height: 41px;
+    font-family: 'Roboto', sans-serif;
+
+    .navbar__city{
+        display: flex;
+        padding: 8px 0px 0px 24px;
+        margin: 2px 10px 0px 0px;
+
+        img{
+            margin-left: 3px;
+        }
+    }
+
+    &__button{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    .button{
+        background-color: white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        border: 3px solid $red;
+        box-sizing: border-box;
+        height: 24px;
+        margin: 8px 0px 8px 0px;
+        width: 128px;
+        font-weight: 700;
+
+        p{
+            margin-top: -5px;
+            color: $red;
+        }
+    }
+    }
+    .navbar__icon{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            margin-right: 24px;
+        }
+
+        .navbar__icon_login{
+            width: 18px;
+            height: 18px;
+            >img{
+                width: 100%;
+            }
+        }
+
+        .navbar__icon_elem1{
+            margin-left: 8px;
+            width: 18px;
+            height: 18px;
+            background-color: $red;
+            border-radius: 50%;
+        }
+
+        .navbar__icon_elem2{
+            margin-left: 8px;
+            width: 18px;
+            height: 18px;
+            background-color: $black;
+            border-radius: 50%;
+        }
+    }

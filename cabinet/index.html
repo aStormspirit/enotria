@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="navbar">
+            <div class="navbar__city">
+                <div class="navbar__city_text">Москва</div>
+                <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
+            </div>
+            <div class='navbar__button'>
+                <button class="navbar__button button"><p>Оформить заявку</p></button>
+            </div>
+            <div class="navbar__icon">
+                <div class="navbar__icon_login"><img  class='login' src="svg/icon.svg" alt="icon"></div>
+                <div class="navbar__icon_elem1"></div>
+                <div class="navbar__icon_elem2"></div>
+            </div>
+            </div>
+            <div class="navbar__form">
+                <div class="navbar__form_image">
+                <div class="navbar__form_section">
+                    <img src="svg/auth.svg" alt="">
+                    <p>Авторизация</p>
+                </div>
+                <div class="navbar__form_section">
+                    <img src="svg/register.svg" alt="">
+                    <p>Регистрация</p>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+
+        </div>
+        <div class="main-panel">
+            <div class="main-panel__logo">
+                <img src="svg/logo.svg" alt="logo">
+            </div>
+            <div class="hide-for-desktop">
+            <div class="main-panel__menu">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner "></span>
+                    </span>
+                  </button>
+            </div>
+            </div>
+            <div class="main-panel__link hide-for-mobile">
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="main-panel__search hide-for-mobile">
+                <form>
+                    <input type="text" placeholder="Я ищу">
+                    <button type="submit"><img src="svg/loop.svg"></button>
+                  </form>
+            </div>
+            <div class="main-panel__info">
+            <div class="main-panel__info_block">
+                <div class="main-panel__info_logo">
+                <img src="svg/logo.svg" alt="logo">
+                </div>
+                <div class="main-panel__info_search">
+                <form class="form">
+                    <div class="input__handler">
+                    <input class="search" type="text" placeholder="Я ищу">
+                    </div>
+                    <div class="button__handler">
+                    <button class="button" type="submit"><img src="svg/loop.svg"></button>
+                    </div>
+                </form>
+                </div>
+                <div class="main-panel__info_link">
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="body">
+            <div class="body__image">
+                <div class="body__image_image">
+                    <div class="body__image_text">
+                        <div class="body__image_text1">
+                        <p>Константин
+                        Константинович
+                        Константинопольский</p>
+                        </div>
+                        <div class="body__image_text2">
+                        <p>Студент</p>
+                    </div>
+                    </div>
+                <img src="svg/cabinet.svg" alt="">
+            </div>
+            <div class="body__image_background"></div>
+            </div>
+        </div>
+        <div class="body__menu">
+            <div class="body__menu_block"><p>Профиль</p><div></div></div>
+            <div class="body__menu_block"><p>мои курсы</p><div></div></div>
+            <div class="body__menu_block"><p>доступные материалы</p><div></div></div>
+        </div>
+        <div class="none">
+        <div class="body__form">
+            <div class="body__form_area">
+                <p>Имя*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Извините, но это поле обязательно к заполнению</p>
+                </div>
+            </div>
+            <div class="body__form_area">
+                <p>Фамилия*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/true.svg" alt="">
+                </form>
+            </div>
+            <div class="body__form_area">
+                <p>Отчество*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Пожалуйста, введите корректное отчество</p>
+                </div>
+            </div>
+            <div class="body__form_area">
+                <p>Email*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/true.svg" alt="">
+                </form>
+            </div>
+            <div class="body__form_area">
+                <p>Телефон*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Пожалуйста, введите корректный номер телефона</p>
+                </div>
+            </div>
+            <div class="body__form_button">
+                <button>
+                    Применить изменения
+                </button>
+            </div>
+        </div>
+        </div>
+        <div class="body__course">
+                <div class="body__course_elem">
+                    <div class="elem__image">
+                        <div class="elem__image_info">
+                            <div>
+                            <p>С 6 сентября
+                                по 24 декабря
+                                2021 года</p>
+                            
+                            </div>
+                            <div>
+                            <p>250 000₽</p>
+                            </div>
+                            <div>
+                            <button>Приобретен</button>
+                            </div>
+                        </div>
+                        <div class="elem__image_img">
+                            <div><p>Прохожу обучение</p></div>                        
+                        </div>
+                    </div>
+                <div class="elem__text">
+                    <p>№1 Основной курс профессионального обучения</p>
+                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
+                <button>Открыть курс</button>
+                <button>Доступные материалы</button>
+                </div>
+                </div>
+                <div class="none">
+                <div class="body__course_about">
+                    <p>Курс занимает</p>
+                    <div class="about__text"><p>490</p><p>академических часа</p></div>
+                    <div class="about__text2">
+                        <p>5,5 академических часа в день</p>
+                    </div>
+                    <div class="about__block">
+                        <div class="about__text text1"><p>83</p><p>темы</p></div>
+                        <div class="about__text text2"><p>123</p><p>лекции</p></div>
+                    </div>
+                    <p style="margin-top: 30px;">Форма занятий</p>
+                    <div class="about__text2">
+                        <p>Лекции-дегустации</p>
+                    </div>
+                    <div class="about__info">
+                <div class="about__info_text">
+                    <p>Начало и конец занятий
+                        в 2021 году</p>
+                    <p>6 сентября — 24 декабря</p>
+                </div>
+                <div class="about__info_text">
+                    <p>Время занятий</p>
+                    <p>Пн...Пт: 10:00 — 14:00</p>
+                </div>
+                    <div>
+                        <p>После прослушивания курса и успешной сдачи экзаменов, студенты получают лицензированный диплом, одобренный Международной Ассоциацией Сомелье (ASI)
+                        </p>
+                    </div>
+                    <div>
+                        <p>Практикуется модульная
+                            (частями) форма обучения</p>
+                    </div>
+                    </div>
+                    <p style="margin-top: 30px;">Структура курса</p>
+                    <div class="about__card">
+                            <p>Тема №1</p>
+                            <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+                        <div class="about__card_flex">
+                            <p>1-а лекция</p>
+                            <div>Изучено</div>
+                        </div>
+                    </div>
+                    <div class="about__card">
+                        <p>Тема №1</p>
+                        <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+                    <div class="about__card_flex">
+                        <p>1-а лекция</p>
+                        <div>Изучено</div>
+                    </div>
+                </div>
+                <div class="about__card">
+                    <p>Тема №1</p>
+                    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+                <div class="about__card_flex">
+                    <p>1-а лекция</p>
+                    <div>Изучено</div>
+                </div>
+            </div>
+            <div class="about__card">
+                <p>Тема №1</p>
+                <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+            <div class="about__card_flex">
+                <p>1-а лекция</p>
+                <div>Изучено</div>
+            </div>
+        </div>
+        <div class="about__card">
+            <p>Тема №1</p>
+            <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+        <div class="about__card_flex">
+            <p>1-а лекция</p>
+            <div>Изучено</div>
+        </div>
+    </div>
+    <div class="about__card">
+        <p>Тема №1</p>
+        <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+    <div class="about__card_flex">
+        <p>1-а лекция</p>
+        <div>Изучено</div>
+    </div>
+</div>
+<div class="about__card">
+    <p>Тема №1</p>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="about__card_flex">
+    <p>1-а лекция</p>
+    <div>Изучено</div>
+</div>
+</div>
+<div class="about__card">
+    <p>Тема №1</p>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="about__card_flex">
+    <p>1-а лекция</p>
+    <div>Изучено</div>
+</div>
+</div>
+</div>
+        </div>
+                <div class="body__course_elem">
+                    <div class="elem__image">
+                        <div class="elem__image_info">
+                            <div>
+                            <p>С 6 сентября
+                                по 24 декабря
+                                2021 года</p>
+                            
+                            </div>
+                            <div>
+                            <p>250 000₽</p>
+                            </div>
+                            <div>
+                            <button>Приобретен</button>
+                            </div>
+                        </div>
+                        <div class="elem__image_img">
+                            <div><p>Прохожу обучение</p></div>                        
+                        </div>
+                    </div>
+                <div class="elem__text">
+                    <p>№2 Универсальный, вечерний, интенсивный курс для профессионалов и любителей</p>
+                <p>Школа вина Энотрия, рада предложить всем любителям вина курс — экспресс! Курс отлично подходит для тех, кто делает первые шаги в мире вина. Это хорошая возможность в короткие сроки познакомиться с профессиональным миром вина.</p>
+                <button>Открыть курс</button>
+                <button>Доступные материалы</button>
+                </div>
+                </div>
+                <div class="body__course_elem">
+                    <div class="elem__image">
+                        <div class="elem__image_info">
+                            <div>
+                            <p>С 6 сентября
+                                по 24 декабря
+                                2021 года</p>
+                            
+                            </div>
+                            <div>
+                            <p>250 000₽</p>
+                            </div>
+                            <div>
+                            <button>Приобретен</button>
+                            </div>
+                        </div>
+                        <div class="elem__image_img">
+                            <div><p>Прохожу обучение</p></div>                        
+                        </div>
+                    </div>
+                <div class="elem__text">
+                    <p>№3 Специальный, летний, интенсивный курс для профессионалов и любителей</p>
+                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
+                <button>Открыть курс</button>
+                <button>Доступные материалы</button>
+                </div>
+                </div>
+                <div class="body__course_elem">
+                    <div class="elem__image">
+                        <div class="elem__image_info">
+                            <div>
+                            <p>С 6 сентября
+                                по 24 декабря
+                                2021 года</p>
+                            
+                            </div>
+                            <div>
+                            <p>250 000₽</p>
+                            </div>
+                            <div>
+                            <button>Приобретен</button>
+                            </div>
+                        </div>
+                        <div class="elem__image_img">
+                            <div><p>Прохожу обучение</p></div>                        
+                        </div>
+                    </div>
+                <div class="elem__text">
+                    <p>№4 Вечерний курс обучения для любителей</p>
+                <p>Школа вина Энотрия, рада предложить всем любителям вина курс – экспресс! Курс отлично подходит для тех, кто делает первые шаги в мире вина. Это хорошая возможность в короткие сроки познакомиться с профессиональным миром вина.</p>
+                <button>Открыть курс</button>
+                <button>Доступные материалы</button>
+                </div>
+                </div>
+                <div class="body__course_elem">
+                    <div class="elem__image">
+                        <div class="elem__image_info">
+                            <div>
+                            <p>С 6 сентября
+                                по 24 декабря
+                                2021 года</p>
+                            
+                            </div>
+                            <div>
+                            <p>250 000₽</p>
+                            </div>
+                            <div>
+                            <button>Приобретен</button>
+                            </div>
+                        </div>
+                        <div class="elem__image_img">
+                            <div><p>Прохожу обучение</p></div>                        
+                        </div>
+                    </div>
+                <div class="elem__text">
+                    <p>№5 Вечерний курс обучения для любителей</p>
+                <p>Школа вина Энотрия, рада предложить всем любителям вина курс – экспресс! Курс отлично подходит для тех, кто делает первые шаги в мире вина. Это хорошая возможность в короткие сроки познакомиться с профессиональным миром вина.</p>
+                <button>Открыть курс</button>
+                <button>Доступные материалы</button>
+                </div>
+                </div>
+        </div>
+        <div class="body__form2">
+        <div class="body__form">
+            <p class="text">Записаться в очередь</p>
+            <div class="body__form_area">
+                <p>Имя*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Извините, но это поле обязательно к заполнению</p>
+                </div>
+            </div>
+            <div class="body__form_area">
+                <p>Фамилия*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/true.svg" alt="">
+                </form>
+            </div>
+            <div class="body__form_area">
+                <p>Отчество*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Пожалуйста, введите корректное отчество</p>
+                </div>
+            </div>
+            <div class="body__form_area">
+                <p>Email*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/true.svg" alt="">
+                </form>
+            </div>
+            <div class="body__form_area">
+                <p>Телефон*</p>
+                <form action="">
+                    <input type="text">
+                    <img src="svg/false.svg" alt="">
+                </form>
+                <div class="body__form_alert">
+                    <div></div>
+                    <p>Пожалуйста, введите корректный номер телефона</p>
+                </div>
+            </div>
+            <div class="body__form_button">
+                <button>
+                    Применить изменения
+                </button>
+            </div>
+        </div>
+        <div class="body__form_footer">
+        </div>
+        </div>
+        <div class="body__course">
+            <div class="body__course_elem">
+                <div class="elem__image">
+                    <div class="elem__image_info">
+                        <div>
+                        <p>С 6 сентября
+                            по 24 декабря
+                            2021 года</p>
+                        
+                        </div>
+                        <div>
+                        <p>250 000₽</p>
+                        </div>
+                        <div>
+                        <button>Приобритен</button>
+                        </div>
+                    </div>
+                    <div class="elem__image_img">
+                        <div><p>Прохожу обучение</p></div>                        
+                    </div>
+                </div>
+            <div class="elem__text">
+                <p>№7 Вечерний курс обучения для любителей</p>
+            <p>Школа вина Энотрия, рада предложить всем любителям вина курс – экспресс! Курс отлично подходит для тех, кто делает первые шаги в мире вина. Это хорошая возможность в короткие сроки познакомиться с профессиональным миром вина.</p>
+            <button>Открыть курс</button>
+            <button>Доступные материалы</button>
+            </div>
+            </div>
+            <div class="body__course_elem">
+                <div class="elem__image">
+                    <div class="elem__image_info">
+                        <div>
+                        <p>С 6 сентября
+                            по 24 декабря
+                            2021 года</p>
+                        
+                        </div>
+                        <div>
+                        <p>250 000₽</p>
+                        </div>
+                        <div>
+                        <button>Приобретен</button>
+                        </div>
+                    </div>
+                    <div class="elem__image_img">
+                        <div><p>Прохожу обучение</p></div>                        
+                    </div>
+                </div>
+            <div class="elem__text">
+                <p>№7 Вечерний курс обучения для любителей</p>
+            <p>Школа вина Энотрия, рада предложить всем любителям вина курс – экспресс! Курс отлично подходит для тех, кто делает первые шаги в мире вина. Это хорошая возможность в короткие сроки познакомиться с профессиональным миром вина.</p>
+            <button>Открыть курс</button>
+            <button>Доступные материалы</button>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__content hide-for-mobile">
+                <p>Школа вина</p>
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="footer__content hide-for-mobile">
+                <p>О школе</p>
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="footer__content footer__content_moscow">
+                <p class="title">Адрес в Москве</p>
+                <p>123007, 4-я</p>
+                <p>Магистральная ул.,</p>
+                <p>д. 11, стр. 2, этаж 2</p>
+                <p class="title">Телефоны:</p>
+                <p>+7 495 510-52-74</p>
+                <p>добавочный 6317,</p>
+                <p>6302, 6305</p>
+                <p class="title">E-mail:</p>
+                <p>msk@enotria.ru</p>
+            </div>
+            <div class="footer__content footer__content_saintp">
+                <p class="title">Адрес в Санкт-Петербурге</p>
+                <p>пр. Добролюбова, 16А</p>
+                <p class="title">Телефоны:</p>
+                <p>+7 812 363 25 16</p>
+                <p>+7 812 363 11 00</p>
+                <p class="title">Электропочта:</p>
+                <p>spb@enotria.ru</p>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2021 Simple</p>
+        </div>
+    </footer>
+</body>
+</html>

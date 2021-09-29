@@ -12,7 +12,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navigation">
+            <div class="navbar">
             <div class="navbar__city">
                 <div class="navbar__city_text">Москва</div>
                 <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
@@ -25,17 +26,23 @@
                 <div class="navbar__icon_elem1"></div>
                 <div class="navbar__icon_elem2"></div>
             </div>
+            </div>
         </nav>
+        <div>
+
+        </div>
         <div class="main-panel">
             <div class="main-panel__logo">
                 <img src="svg/logo.svg" alt="logo">
             </div>
-            <div class="main-panel__menu hide-for-desktop">
+            <div class="hide-for-desktop">
+            <div class="main-panel__menu">
                 <button class="hamburger hamburger--collapse" type="button">
                     <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
+                      <span class="hamburger-inner "></span>
                     </span>
                   </button>
+            </div>
             </div>
             <div class="main-panel__link hide-for-mobile">
                 <a href="#">О школе</a>
@@ -55,31 +62,33 @@
         </div>
     </header>
     <main>
+        <!-- главное меню -->
         <div class="body">
             <div class="body__image">
                 <div class="body__image_image">
-                    <div class="body__image_test">
-                        <div class="body__image_test1">
+                <div class="body__image_block">
+                    <div class="body__image_text228">
+                        <div class="body__image_text1">
                         <p>Константин
                         Константинович
                         Константинопольский</p>
                         </div>
-                    <div class="body__image_test">
+                        <div class="body__image_text2">
                         <p>Студент</p>
                     </div>
                     </div>
-            <div class='body__image_img'>
                 <img src="svg/cabinet.svg" alt="">
             </div>
+                <div class="body__image_background"></div>
             </div>
             </div>
-            <div class="body__background"></div>
         </div>
         <div class="body__menu">
             <div class="body__menu_block"><p>Профиль</p><div></div></div>
             <div class="body__menu_block"><p>мои курсы</p><div></div></div>
-            <div class="body__menu_block"><p>доступные материалы</p><div></div></div>
+            <div class="body__menu_block"><p>доступные материалы</p><div></div><div class="plus">+28</div></div>
         </div>
+        <!-- Конец главного меню -->
 <!-- блок элемент доступно материалов  -->
         <div class="body__study">
             <div class="body__study_card">

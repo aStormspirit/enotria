@@ -1,0 +1,170 @@
+footer{
+    .footer{
+        margin: 70px 8px 8px 8px;
+        background-color: $black;
+
+        &__grid{
+            display: grid;
+        }
+
+        &__content{
+            font-family: 'Roboto Condensed', sans-serif;
+            color: white;
+
+            >p{
+                font-weight: 400;
+            }
+
+            &_moscow{
+                margin: 16px 16px 0px 16px;
+                width: 50%;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;                
+
+             .title{
+                    font-size: $font-med;
+                    border-bottom: 1px solid #303233;
+                    font-weight: 700;
+                    }                
+            }
+
+            &_saintp{
+                margin: 16px 16px 0px 16px;
+                width: 50%;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+               .title{
+                    font-size: $font-med;
+                    border-bottom: 1px solid #303233;
+                    }
+            }
+        }
+
+        &__copyright{
+            border-top: 1px solid #FFFFFF;
+            color: white;
+            width: 90%;
+            margin-left: 24px;
+            padding-bottom: 10px;
+
+            >p{
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@include media("<desktop"){
+    .footer__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include media(">desktop"){
+
+    .footer__grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer__copyright{
+        margin-left: 64px;
+    }
+
+    .footer__content:first-child{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+
+        >a{
+            text-decoration: none;
+            text-decoration: none;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $grey-light;
+
+        }
+    }
+
+    .footer__content:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+
+        >a{
+            text-decoration: none;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $grey-light;
+
+        }
+    }
+
+    .footer__content_moscow{
+
+        .title{
+            color: white;
+            border: none;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        >p{
+            color: #CED6D9;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    .footer__content_saintp{
+
+        .title{
+            color: white;
+            border: none;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        >p{
+            color: #CED6D9;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+}

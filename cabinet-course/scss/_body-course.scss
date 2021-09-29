@@ -1,0 +1,562 @@
+.body__course{
+    margin-left: 8px;
+    margin-right: 7px;
+
+    &_elem{
+        margin-top: 40px;
+    }
+
+    &_about{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        .about__text{
+            min-height: 40px;
+            display: flex;
+            background-color: $red;
+            justify-content: space-between;
+            align-items: center;
+
+            >p:first-child{
+                margin-left: 8px;
+                color: $white;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+
+            >p:nth-child(2){
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $white;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        >p{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+
+        .about__text2{
+            min-height: 32px;
+            border: 2px black solid;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about__block{
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            .text1{
+                margin-right: 8px;
+            }
+
+            .text2{
+                margin-left: 8px;
+            }
+        }
+
+        .about__info{
+
+            .about__info_text{
+                margin-top: 30px;
+            
+            >p:first-child{
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+
+            >p:nth-child(2){
+                margin-top: 8px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+            .course__info{
+                >div{
+                margin-top: 24px;
+                border: gray 2px solid;
+                text-align: center;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #303233;
+                padding: auto;
+                }
+            }
+        }
+    }
+
+    .elem__image{
+        min-height: 136px;
+        display: grid;
+        grid-auto-columns: auto;
+        grid-template-columns: 50% 50%;
+
+        &_info{
+            background-color: #EDF1F2;
+            display: grid;
+
+            >div{
+                margin: 16px;
+
+                >button{
+                    padding: 6px;
+                    color: white;
+                    width: 100%;
+                    background-color: #1CC05E;
+                    border: none;
+                }
+            }
+
+            >div:first-child{
+                display: flex;
+                align-items: center;
+
+                >p{
+                    text-align: left;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 16px;
+                    letter-spacing: 0em;
+                }
+            }
+
+            >div:nth-child(2){
+
+                >p{
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: right;
+                }
+            }
+
+        }
+
+        &_img{
+            position: relative;
+            background-image: url(../svg/elem.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            >div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                min-height: 32px;
+                background-color: $red;
+                width: 90%;
+                margin-left: 10px;
+                position: absolute;
+                top: -16px;
+                left: 8px;
+
+                >p{
+                    color: $white;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: 0em;
+                }
+            }
+        }
+    }
+
+    .elem__text{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+
+        >p:first-child{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        >p:nth-child(2){
+            margin-top: 8px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+
+        >button{
+            background-color: #CED6D9;
+            border: none;
+            margin-top: 8px;
+        }
+    }
+}
+
+.body__form2{
+    background-color: $grey-dark;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    .text{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $white;
+        width: 50%;
+        margin-top: 12px;
+    }
+
+    .body__form_area{
+
+        >p{
+        color: $white;
+        }
+    }
+
+    .body__form_footer{
+        margin-top: 16px;
+        height: 16px;
+        background-color: $red;
+    }
+}
+
+.about__card{
+    .about__card_flex{
+        .lose{
+            background-color: $red;
+        }
+        .not{
+            background-color: $grey-dark;
+        }
+    }
+}
+
+
+.about__card{
+    margin-top: 16px;
+    background-color: #EDF1F2;
+    padding: 8px;
+
+    >p:first-child{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #303233;
+    }
+
+    >p:nth-child(2){
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #303233;
+    }
+
+    .about__card_flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        >p{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #303233;
+        }
+    
+
+        >div{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            background-color: #1CC05E;
+            padding: 4px 8px 4px 8px;
+            color: $white;
+        }
+    }
+}
+
+@include media("<desktop"){
+    .about__grid{
+        .first{
+            >p{
+                font-family: Roboto Condensed;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+    
+            .about__text2{
+                margin-top: 8px;
+            }
+        }
+    
+        .about__block{
+            margin-top: 16px;
+        }
+
+        .second{
+            >p{
+                font-family: Roboto Condensed;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@include media(">desktop"){
+    .body__course{
+        p{
+            margin: 0;
+        }
+        &_elem{
+            display: flex;
+
+            .elem__image{
+                margin-right: 32px;
+                width: 75%;
+                grid-template-columns: 30% 70%;
+
+                &_info{
+                    >div:first-child{
+                        width: 42%;
+                    }
+
+                    >div:nth-child(2){
+                        margin-right: 16px;
+
+                        >p{
+                            margin: 0;
+                            font-family: Roboto Condensed;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 24px;
+                            letter-spacing: 0em;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            .elem__text{
+                display: grid;
+
+                >p:first-child{
+                    margin: 0;
+                }
+
+                >button{
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+        .about__grid{
+            display: grid;
+            grid-auto-columns: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 32px;
+        }
+
+        .about__block{
+            margin-top: 36px;
+            height: 72px;
+        }
+
+        .about__text{
+            flex-direction: column;
+            height: 72px;
+
+            >p:first-child{
+                margin-top: 15px;
+                font-family: Roboto Condensed;
+                font-size: 48px !important;
+                font-style: normal;
+                font-weight: 700 !important;
+                line-height: 24px !important;
+                letter-spacing: 0em !important;
+                text-align: center !important;
+            }
+
+            >p:nth-child(2){
+                padding-bottom: 8px;
+            }
+        }
+
+        .about__text2{
+            height: 72px;
+
+            >p{
+                font-family: Roboto Condensed;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #303233;
+            }
+        }
+
+        .first{
+            >p:first-child{
+                margin-bottom: 12px;
+                font-family: Roboto Condensed;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            >div:nth-child(3){
+                margin-top: 8px;
+                height: 48px;
+
+                >p{
+                    font-family: Roboto Condensed;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 16px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+        }
+
+        .second{
+            >p{
+                font-family: Roboto Condensed;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+
+            >div{
+                margin-top: 12px;
+            }
+        }
+
+        .course__info{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 32px;
+
+            >div{
+                padding: 20px;
+                margin-top: 24px;
+                border: gray 2px solid;
+                text-align: center;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #303233;
+                padding: auto;
+            }
+        }
+
+        .about__card{
+            min-height: 88px;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 121px auto 210px;
+        }
+    
+}

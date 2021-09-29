@@ -57,7 +57,7 @@
                 height: 75%;
                 z-index: 0;
                 position: absolute;
-                margin-top: 11%;
+                margin-top: 6%;
         }
     }
 }
@@ -82,5 +82,9 @@
         line-height: 24px;
         letter-spacing: 0em;
         text-align: center;
+    }
+
+    .body__image_background{
+        margin-top: 11%;
     }
 }

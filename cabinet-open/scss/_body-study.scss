@@ -3,6 +3,7 @@
     margin-right: 8px;
 
     &_card{
+        min-height: 224px;
         margin-top: 40px;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -14,14 +15,13 @@
     padding: 8px;
 
     &_row{
-        margin-top: 26px;
         align-items: center;
         
 
         .row{
             margin-left: 8px;
-            position: relative;
-            >p:first-child{
+
+            >div:first-child{
                 font-family: Roboto Condensed;
                 font-size: 18px;
                 font-style: normal;
@@ -30,11 +30,9 @@
                 letter-spacing: 0em;
                 text-align: left;
                 color: #F24724;
-                position: absolute;
-                top: -24px;
             }
 
-            >p:nth-child(2){
+            >div:nth-child(2){
                 font-family: Roboto Condensed;
                 font-size: 14px;
                 font-style: normal;
@@ -62,7 +60,7 @@
     >div:nth-child(2){
         display: flex;
 
-        >p:first-child{
+        >div:first-child{
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 36px;
             font-style: normal;
@@ -76,9 +74,49 @@
 }
 
 .card__background{
-    >img{
-        width: 100%;
-    }
+    background-image: url(../svg/course.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+}
+
+@include media(">desktop"){
+    .body__study_card{
+        grid-template-columns: 30% 70%;
+    }
+
+    .card__info_row{
+        >div:first-child{
+            margin-top: 11px;
+        }
+    }
+
+    .row{
+        >div:first-child{
+            height: 30px;
+        }
+    }
+
+    .card__info{
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px !important;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    .body__title{
+        margin-top: 40px !important;
+        display: grid;
+        grid-template-rows: 1fr 1fr auto;
+    }
+
+    .button{
+        width: 40%;
+    }
 }

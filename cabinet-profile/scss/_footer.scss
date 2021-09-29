@@ -5,7 +5,6 @@ footer{
 
         &__grid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
         &__content{
@@ -45,7 +44,7 @@ footer{
             border-top: 1px solid #FFFFFF;
             color: white;
             width: 90%;
-            margin-left: 64px;
+            margin-left: 24px;
             padding-bottom: 10px;
 
             >p{
@@ -61,8 +60,21 @@ footer{
     }
 }
 
+@include media("<desktop"){
+    .footer__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @include media(">desktop"){
+
+    .footer__grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .footer__copyright{
+        margin-left: 64px;
+    }
 
     .footer__content:first-child{
         display: flex;

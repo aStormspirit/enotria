@@ -5,10 +5,18 @@
     &__image{
             width: 100%;
 
+            &_block{
+                z-index: 200;
+                width: 95%;
+                >img{
+                    width: 100%;
+                }
+            }
+
             &_text228{
                 position: absolute;
                 z-index: 200;
-                left: 160px;
+                left: 10%;
                 color: $white;
                 width: 72px;
                 display: flex;

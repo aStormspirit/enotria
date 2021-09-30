@@ -1,7 +1,7 @@
 .body__title{
     margin: 16px 8px 0px 8px;
+    grid-template-rows: 1fr auto;
     >p:first-child{
-        width: 272px;
         font-family: Roboto Condensed;
         font-size: 24px;
         font-style: normal;
@@ -21,13 +21,14 @@
         letter-spacing: 0em;
         text-align: left;
         color: #303233;
+        margin-bottom: 30px;
     }
 
     .button{
-        margin-top: 9px;
         background-color: #CED6D9;
 
         >button{
+            min-height: 40px;
             padding: 4px;
             color: #303233;
             background: none;

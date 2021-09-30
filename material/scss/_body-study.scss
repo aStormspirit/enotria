@@ -1,11 +1,40 @@
+
 .body__study{
     margin-left: 8px;
     margin-right: 8px;
 
+    .red{
+        background-color: $red !important;
+        color: white !important;
+        
+        .row{
+            >div:first-child{
+                color: #1CC05E !important;
+            }
+
+            >div:nth-child(2){
+                color: white !important;
+            }
+        }
+
+    }
+
     &_card{
+        position: relative;
+        min-height: 224px;
         margin-top: 40px;
         display: grid;
         grid-template-columns: 50% 50%;
+
+        .border{
+            position: absolute;
+            z-index: -1;
+            min-width: 50%;
+            border: 2px solid $red;
+            min-height: 110%;
+            top: -5%;
+            left: -2%;
+        }
 
 }
 
@@ -13,16 +42,16 @@
     background-color: #EDF1F2;
     padding: 8px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
 
     &_row{
         align-items: center;
+        margin-bottom: 60px;
         
 
         .row{
             margin-left: 8px;
-            position: relative;
-            >p:first-child{
+
+            >div:first-child{
                 font-family: Roboto Condensed;
                 font-size: 18px;
                 font-style: normal;
@@ -31,11 +60,9 @@
                 letter-spacing: 0em;
                 text-align: left;
                 color: #F24724;
-                position: absolute;
-                top: -24px;
             }
 
-            >p:nth-child(2){
+            >div:nth-child(2){
                 font-family: Roboto Condensed;
                 font-size: 14px;
                 font-style: normal;
@@ -63,7 +90,7 @@
     >div:nth-child(2){
         display: flex;
 
-        >p:first-child{
+        >div:first-child{
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 36px;
             font-style: normal;
@@ -74,24 +101,162 @@
         }
 
     }
+
+    .button__card{
+        >button{
+            min-height: 24px;
+            color: white;
+            width: 100%;
+            border: none;
+            background-color: #303233;
+        }
+    }
 }
 
 .card__background{
-    >img{
-        width: 100%;
+    background-image: url(../svg/course.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .good{
+        background-color: #1CC05E !important;
+    }
+
+    &_info{
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: $red;
+        >p{
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+        }
     }
 }
 
-.button{
-    margin-top: 27px;
-    width: 100%;
+}
 
-    >button{
-        color: white;
-        border: none;
-        background-color: #303233;
-        width: 100%;
+@include media("<desktop"){
+    .card__info{
+        >div:first-child{
+            font-size: 24px !important;
+
+            >p:nth-child(2){
+                margin-top: 12px;
+            }
+        }
+        &_row{
+            margin-top: 40px;
+            >div:first-child{
+                margin-top: 10px;
+                font-size: 64px !important;
+            }
+
+            .row{
+                >div:first-child{
+                    font-size: 32px !important;
+                }
+                >div:nth-child(2){
+                    margin-top: -13px;
+                    font-size: 24px !important;
+                }
+            }
+        }
+
     }
 }
 
+@include media("<desktop"){
+
+    .border{
+        min-width: 55% !important;
+    }
+
+    .wrapper{
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .card__background_info{
+        position: absolute;
+        width: 85%;
+        min-height: 32px;
+        left: 10%;
+        top: -5%;
+    }
+}
+
+@include media(">desktop"){
+
+    .wrapper{
+        margin-left: 37px;
+        margin-right: 37px;
+    }
+
+
+    .body__study_card{
+        grid-template-columns: 30% 70%;
+
+        .border{
+            position: absolute;
+            z-index: -1;
+            min-width: 50%;
+            border: 2px solid $red;
+            min-height: 110%;
+            top: -5%;
+            left: -2%;
+        }
+    }
+
+    .card__info_row{
+        >div:first-child{
+            margin-top: 11px;
+        }
+    }
+
+    .row{
+        >div:first-child{
+            height: 30px;
+        }
+    }
+
+    .card__info{
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px !important;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    .body__title{
+        margin-top: 40px !important;
+        display: grid;
+        grid-template-rows: 1fr 1fr auto;
+    }
+
+    .button{
+        width: 40%;
+    }
+
+    .card__background_info{
+        background-color: $red;
+        position: absolute;
+        padding: 2px;
+        min-height: 48px;
+        min-width: 96px;
+        left: 70%;
+        top: -10%;
+    }
 }

@@ -17,12 +17,8 @@ html {
     font-size: $font-sm;
   }
 
-  p {
-    margin: 0%;
-  }
-
-  .none{
-    display: none;
+  p{
+    margin: 0;
   }
 
   @include media('<=desktop'){

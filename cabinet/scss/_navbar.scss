@@ -230,6 +230,11 @@
     
 
 @include media(">desktop"){
+    .navbar{
+        margin-left: 64px;
+        margin-right: 64px;
+    }
+    
     .navbar__button{
         justify-content: end;
         margin-right: 80px;

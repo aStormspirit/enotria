@@ -5,6 +5,17 @@
     grid-template-rows: auto;
     grid-gap: 20px;
 
+    .text{
+        font-family: Roboto Condensed;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+    }
+
     &_alert{
         display: none;
         background-color: $red;
@@ -36,7 +47,7 @@
     &_area{
 
         >p{
-            color: $grey-dark;
+            color: white;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 16px;
             font-style: normal;
@@ -63,6 +74,12 @@
         }
     }
 
+    &_footer{
+        background-color: $red;
+        margin-top: 33px;
+        min-height: 16px;
+    }
+
     &_button{
         margin-top: 15px;
         height: 40px;
@@ -82,4 +99,17 @@
         }
     }
     
+}
+
+.body__form2{
+    display: none;
+    background-color: #303233;
+}
+
+@include media(">desktop"){
+    .body__form2{
+        position: absolute;
+        z-index: 200;
+        min-width: 448px;
+    }
 }

@@ -41,6 +41,14 @@
         margin-left: 10px;
         color: $white;
         text-decoration: none;
+        font-family: Roboto Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+
         }
     }
 
@@ -131,20 +139,24 @@
     .main-panel{
         justify-content: space-between;
 
+        &__logo{
+            margin-left: 64px;
+        }
+
         &__link{
             width: 76%;
             justify-content: space-evenly;
         }
 
         &__search{
-            margin-right: 50px;
+            margin-right: 80px;
 
             >form{
                 padding: 1px;
                 border: #303233 2px solid;
 
                 >input{
-                    width: 85%;
+                    width: 84%;
                     background: none;
                     border: none;
                     color: white;

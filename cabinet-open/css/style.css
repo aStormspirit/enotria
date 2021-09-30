@@ -2148,6 +2148,12 @@ footer .footer__copyright > p {
   margin-top: 11%;
 }
 
+@media (max-width: 1279px) {
+  .body__image_background {
+    margin-top: 6% !important;
+  }
+}
+
 @media (min-width: 1281px) {
   .body__image_text1 {
     font-family: Roboto Condensed;
@@ -2257,6 +2263,8 @@ footer .footer__copyright > p {
   margin: 40px 8px 16px 8px;
   background-color: #EDF1F2;
   padding: 8px;
+  position: relative;
+  min-height: 88px;
 }
 
 .body__material > p {
@@ -2270,12 +2278,43 @@ footer .footer__copyright > p {
   text-align: left;
 }
 
+.body__material .new {
+  position: absolute;
+  background-color: #9B0034;
+  left: 8%;
+  top: -18%;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
 @media (min-width: 1281px) {
   .wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
+  }
+  .body__material {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px auto 40px;
+        grid-template-columns: 40px auto 40px;
+  }
+  .body__material > p {
+    width: 780px;
+    margin-top: 12px;
+  }
+  .body__material .hide-for-mobile > img {
+    width: 100%;
+    margin-top: 12px;
   }
 }
 
@@ -2361,6 +2400,29 @@ footer .footer__copyright > p {
   background-image: url(../svg/course.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .card__info > div:first-child {
+    font-size: 24px !important;
+  }
+  .card__info > div:first-child > p:nth-child(2) {
+    margin-top: 12px;
+  }
+  .card__info_row {
+    margin-top: 40px;
+  }
+  .card__info_row > div:first-child {
+    margin-top: 10px;
+    font-size: 64px !important;
+  }
+  .card__info_row .row > div:first-child {
+    font-size: 32px !important;
+  }
+  .card__info_row .row > div:nth-child(2) {
+    margin-top: -13px;
+    font-size: 24px !important;
+  }
 }
 
 @media (min-width: 1281px) {

@@ -62,6 +62,12 @@
     }
 }
 
+@include media("<desktop"){
+    .body__image_background{
+        margin-top: 6% !important;
+    }
+}
+
 
 @include media(">desktop"){
     .body__image_text1{

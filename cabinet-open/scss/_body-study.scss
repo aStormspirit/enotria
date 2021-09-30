@@ -81,6 +81,36 @@
 
 }
 
+@include media("<desktop"){
+    .card__info{
+        >div:first-child{
+            font-size: 24px !important;
+
+            >p:nth-child(2){
+                margin-top: 12px;
+            }
+        }
+        &_row{
+            margin-top: 40px;
+            >div:first-child{
+                margin-top: 10px;
+                font-size: 64px !important;
+            }
+
+            .row{
+                >div:first-child{
+                    font-size: 32px !important;
+                }
+                >div:nth-child(2){
+                    margin-top: -13px;
+                    font-size: 24px !important;
+                }
+            }
+        }
+
+    }
+}
+
 @include media(">desktop"){
     .body__study_card{
         grid-template-columns: 30% 70%;

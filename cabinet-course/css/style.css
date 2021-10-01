@@ -2371,6 +2371,18 @@ footer .footer__copyright > p {
   margin-left: 8px;
 }
 
+.body__course_about .about__info .table > table {
+  width: 100%;
+}
+
+.body__course_about .about__info .line > th {
+  border-left: 2px solid #9B0034;
+}
+
+.body__course_about .about__info .line .red > th > hr {
+  color: #9B0034;
+}
+
 .body__course_about .about__info .about__info_text {
   margin-top: 30px;
 }

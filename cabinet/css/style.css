@@ -1972,6 +1972,12 @@ footer .footer__copyright > p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .footer__content_moscow {
+    margin-left: 50px !important;
+  }
+  .footer__content_saintp {
+    margin-left: 50px !important;
+  }
 }
 
 @media (min-width: 1281px) {
@@ -2145,10 +2151,13 @@ footer .footer__copyright > p {
   height: 75%;
   z-index: 0;
   position: absolute;
-  margin-top: 11%;
+  margin-top: 6%;
 }
 
 @media (min-width: 1281px) {
+  .body__image_background {
+    margin-top: 11%;
+  }
   .body__image_text1 {
     font-family: Roboto Condensed;
     font-size: 32px;
@@ -2183,15 +2192,15 @@ footer .footer__copyright > p {
   position: relative;
 }
 
-.body__menu_block:first-child {
+.body__menu_block:nth-child(2) {
   background-color: black;
 }
 
-.body__menu_block:first-child > p {
+.body__menu_block:nth-child(2) > p {
   color: white;
 }
 
-.body__menu_block:first-child > div {
+.body__menu_block:nth-child(2) > div {
   width: 16px;
   height: 16px;
   background-color: black;

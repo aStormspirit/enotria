@@ -9,7 +9,7 @@
     z-index: 500;
     position: relative;
 
-    &_block:first-child{
+    &_block:nth-child(2){
         background-color: black;
 
         >p{

@@ -64,6 +64,14 @@ footer{
     .footer__grid{
         grid-template-columns: 1fr 1fr;
     }
+
+    .footer__content_moscow{
+        margin-left: 50px !important;
+    }
+
+    .footer__content_saintp{
+        margin-left: 50px !important;
+    }
 }
 
 @include media(">desktop"){

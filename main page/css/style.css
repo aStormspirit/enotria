@@ -6,7 +6,6 @@
 **/
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -741,11 +740,6 @@ body {
   }
 }
 
-/**
-*
-* Testing
-*
-**/
 /**
 *
 * Testing
@@ -2109,8 +2103,6 @@ footer .footer {
 footer .footer__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 footer .footer__content {
@@ -2155,7 +2147,7 @@ footer .footer__copyright {
   border-top: 1px solid #FFFFFF;
   color: white;
   width: 90%;
-  margin-left: 64px;
+  margin-left: 24px;
   padding-bottom: 10px;
 }
 
@@ -2169,7 +2161,27 @@ footer .footer__copyright > p {
   text-align: left;
 }
 
+@media (max-width: 1279px) {
+  .footer__grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .footer__content_moscow {
+    margin-left: 50px !important;
+  }
+  .footer__content_saintp {
+    margin-left: 50px !important;
+  }
+}
+
 @media (min-width: 1281px) {
+  .footer__grid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .footer__copyright {
+    margin-left: 64px;
+  }
   .footer__content:first-child {
     display: -webkit-box;
     display: -ms-flexbox;

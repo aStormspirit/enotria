@@ -2,14 +2,14 @@
     margin-top: -4px;
     background-color: $grey-light;
     min-height: 32px;
-    margin-left: 8px;
-    margin-right: 7px;
+    margin-left: 26px;
+    margin-right: 26px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 500;
     position: relative;
 
-    &_block:first-child{
+    &_block:nth-child(2){
         background-color: black;
 
         >p{
@@ -52,6 +52,10 @@
 }
 
 @include media(">desktop"){
+    .body__menu{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
     .body__menu_block{
         >p{
             font-family: Roboto;

@@ -57,13 +57,17 @@
                 height: 75%;
                 z-index: 0;
                 position: absolute;
-                margin-top: 11%;
+                margin-top: 6%;
         }
     }
 }
 
 
 @include media(">desktop"){
+    .body__image_background{
+        margin-top: 11%;
+    }
+    
     .body__image_text1{
         font-family: Roboto Condensed;
         font-size: 32px;

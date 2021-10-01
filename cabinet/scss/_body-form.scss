@@ -102,9 +102,11 @@
 }
 
 .body__form2{
-    display: none;
     background-color: #303233;
+    margin-left: 32px;
+    margin-right: 32px;
 }
+
 
 @include media(">desktop"){
     .body__form2{

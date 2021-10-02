@@ -2376,7 +2376,13 @@ footer .footer__copyright > p {
 }
 
 .body__course_about .about__info .line > th {
-  border-left: 2px solid #9B0034;
+  border-left: 2px solid #CED6D9;
+}
+
+.body__course_about .about__info .line > th > hr {
+  height: 3px;
+  background-color: #CED6D9;
+  border: #CED6D9;
 }
 
 .body__course_about .about__info .line .red > th > hr {

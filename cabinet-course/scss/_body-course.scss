@@ -94,7 +94,12 @@
 
             .line{
                 >th{
-                    border-left: 2px solid $red;
+                    border-left: 2px solid #CED6D9;
+                    >hr{
+                        height: 3px;
+                        background-color: #CED6D9;
+                        border: #CED6D9;
+                    }
                 }
 
                 .red{

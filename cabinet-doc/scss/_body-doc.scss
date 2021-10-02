@@ -1,5 +1,29 @@
 .body__doc{
+    margin-top: 136px;
     margin-left: 5%;
     margin-right: 5%;
     background-color: #F2F2F2;
+
+    .red{
+        color: $red;
+    }
+
+    .little{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        top: 20px;
+        position: relative;
+        top: -5px;
+        font-weight: 200;
+    }
+
+    &_text{
+        padding: 39px 28px 33px 98px;
+        max-width: 736px;
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+    }
 }

@@ -2,8 +2,8 @@
     margin-top: -4px;
     background-color: $grey-light;
     min-height: 32px;
-    margin-left: 26px;
-    margin-right: 26px;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     z-index: 500;
@@ -53,8 +53,8 @@
 
 @include media(">desktop"){
     .body__menu{
-        margin-left: 45px;
-        margin-right: 45px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .body__menu_block{
         >p{

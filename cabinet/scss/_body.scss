@@ -1,11 +1,11 @@
 .body{
-    margin-left: 8px;
-    margin-right: 8px;
 
     &__image{
             width: 100%;
 
             &_block{
+                margin-left: 5%;
+                margin-right: 5%;
                 z-index: 200;
                 width: 95%;
                 >img{
@@ -53,7 +53,7 @@
             }
         &_background{
                 background-color: #9B0034;
-                width: 100%;
+                width: 99%;
                 height: 75%;
                 z-index: 0;
                 position: absolute;
@@ -64,10 +64,6 @@
 
 
 @include media(">desktop"){
-    .body__image_background{
-        margin-top: 11%;
-    }
-    
     .body__image_text1{
         font-family: Roboto Condensed;
         font-size: 32px;
@@ -86,5 +82,9 @@
         line-height: 24px;
         letter-spacing: 0em;
         text-align: center;
+    }
+
+    .body__image_background{
+        margin-top: 10.4%;
     }
 }

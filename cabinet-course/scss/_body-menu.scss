@@ -9,6 +9,10 @@
     z-index: 500;
     position: relative;
 
+    p{
+        margin: 0;
+    }
+
     &_block:nth-child(2){
         background-color: black;
 

@@ -2185,6 +2185,10 @@ footer .footer__copyright > p {
   position: relative;
 }
 
+.body__menu p {
+  margin: 0;
+}
+
 .body__menu_block:nth-child(2) {
   background-color: black;
 }
@@ -2253,8 +2257,8 @@ footer .footer__copyright > p {
 }
 
 .body__course {
-  margin-left: 8px;
-  margin-right: 7px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .body__course_elem {
@@ -2364,8 +2368,40 @@ footer .footer__copyright > p {
   margin-left: 8px;
 }
 
+.body__course_about .about__info .week {
+  border-collapse: collapse;
+  font-family: Roboto Condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.body__course_about .about__info .week .disable {
+  color: #CED6D9;
+}
+
+.body__course_about .about__info .table {
+  margin-top: 19px;
+}
+
 .body__course_about .about__info .table > table {
   width: 100%;
+}
+
+.body__course_about .about__info .color {
+  background-color: #9B0034;
+}
+
+.body__course_about .about__info .line {
+  height: 4px;
+}
+
+.body__course_about .about__info .line .red {
+  border-left: 2px solid #9B0034 !important;
+  border-right: 2px solid #9B0034 !important;
 }
 
 .body__course_about .about__info .line > th {
@@ -2373,17 +2409,38 @@ footer .footer__copyright > p {
 }
 
 .body__course_about .about__info .line > th > hr {
+  margin-top: 3px;
+  margin-bottom: 3px;
   height: 3px;
   background-color: #CED6D9;
   border: #CED6D9;
 }
 
-.body__course_about .about__info .line .red > th > hr {
-  color: #9B0034;
+.body__course_about .about__info .line .color:not(.red) {
+  background-color: #CED6D9;
+}
+
+.body__course_about .about__info .line .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body__course_about .about__info .line .add > hr {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.body__course_about .about__info .line .add .first {
+  width: 20px;
+}
+
+.body__course_about .about__info .line > th:last-child {
+  border-right: 2px solid #CED6D9;
 }
 
 .body__course_about .about__info .about__info_text {
-  margin-top: 30px;
+  margin-top: 64px;
 }
 
 .body__course_about .about__info .about__info_text > p:first-child {
@@ -2548,6 +2605,7 @@ footer .footer__copyright > p {
 }
 
 .body__course .elem__text > button {
+  min-height: 24px;
   background-color: #CED6D9;
   border: none;
   margin-top: 8px;

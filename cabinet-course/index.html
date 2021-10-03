@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -144,7 +141,7 @@
                     в 2021 году</p>
                 <p class="hide-for-desktop">6 сентября — 24 декабря</p>
                 <div class="table hide-for-mobile">
-                    <table>
+                    <table class="week">
                         <tr>
                             <th>январь</th>
                             <th>февраль</th>
@@ -154,9 +151,9 @@
                             <th>июнь</th>
                             <th>июль</th>
                             <th>август</th>
-                            <th>сентябрь</th>
+                            <th>6 сентября</th>
                             <th>ноябрь</th>
-                            <th>Декабрь</th>
+                            <th>28 декабря</th>
                         </tr>
                         <tr class="line">
                             <th><hr></th>
@@ -167,9 +164,9 @@
                             <th><hr></th>
                             <th><hr></th>
                             <th><hr></th>
+                            <th class="add"><hr class="first"><hr class="second"></th>
                             <th><hr></th>
-                            <th><hr></th>
-                            <th><hr></th>
+                            <th class="add"><hr><hr></th>
                         </tr>
                     </table>
                 </div>
@@ -177,7 +174,7 @@
             <div class="about__info_text">
                 <p>Время занятий</p>
                 <p class="hide-for-desktop">Пн...Пт: 10:00 — 14:00</p>
-                <div class="table">
+                <div class="table hide-for-mobile">
                     <table class="week">
                         <tr>
                             <th>Понедельник</th>
@@ -185,17 +182,35 @@
                             <th>Среда</th>
                             <th>Четверг</th>
                             <th>Пятница</th>
-                            <th>Суббота</th>
-                            <th>Воскресенье</th>
+                            <th class="disable">Суббота</th>
+                            <th class="disable">Воскресенье</th>
                         </tr>
                         <tr class="line">
-                            <th class="red"><hr></th>
-                            <th class="red"><hr></th>
-                            <th class="red"><hr></th>
-                            <th class="red"><hr></th>
-                            <th class="red"><hr></th>
-                            <th><hr></th>
-                            <th><hr></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr class="line">
+                            <th class="red color"></th>
+                            <th class="red color"></th>
+                            <th class="red color"></th>
+                            <th class="red color"></th>
+                            <th class="red color"></th>
+                            <th class="color"></th>
+                            <th class="color"></th>
+                        </tr>
+                        <tr class="line">
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th class="red"></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         <tr>
                             <th>10:00-14:00</th>
@@ -203,8 +218,8 @@
                             <th>10:00-14:00</th>
                             <th>10:00-14:00</th>
                             <th>10:00-14:00</th>
-                            <th>Выходной</th>
-                            <th>Выходной</th>
+                            <th class="disable">Выходной</th>
+                            <th class="disable">Выходной</th>
                         </tr>
                     </table>
                 </div>

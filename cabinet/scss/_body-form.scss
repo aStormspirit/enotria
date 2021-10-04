@@ -17,7 +17,6 @@
     }
 
     &_alert{
-        display: none;
         background-color: $red;
         margin-top: 8px;
         height: 24px;
@@ -107,6 +106,13 @@
     margin-right: 32px;
 }
 
+@include media("<desktop"){
+    .body__form_alert{
+        >p{
+            font-size: 12px;
+        }
+    }
+}
 
 @include media(">desktop"){
     .body__form2{

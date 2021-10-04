@@ -148,8 +148,22 @@
             width: 90%;
             background-color: $red;
             margin-top: 8px;
+            position: relative;
+            
+            >p{
+                margin: 5px 0;
+                color: white;
+                font-family: Roboto Condensed;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
 
             .drop{
+                position: absolute;
                 width: 16px;
                 height: 16px;
                 background-color: $red;
@@ -158,6 +172,8 @@
                 justify-content: center;
                 rotate: 45deg;
                 margin-left: 50%;   
+                top: -4px;
+                z-index: -1;
             }
         }
 

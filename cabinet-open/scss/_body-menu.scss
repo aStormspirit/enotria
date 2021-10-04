@@ -46,6 +46,11 @@
 }
 
 @include media("<desktop"){
+    .body__menu_block{
+        >p{
+            font-size: 10px
+        }
+    }
     .plus{
         display: none;
     }

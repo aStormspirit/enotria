@@ -165,8 +165,8 @@
     .place{
         background-color: #1CC05E !important;
         min-height: 74px;
-        width: 32% !important;
-        left: 61% !important;
+        width: 32%;
+        left: 61%;
         display: grid;
         color: white;
 
@@ -234,6 +234,12 @@
 }
 
 @include media("<desktop"){
+
+    .place{
+        width: 40% !important;
+        left: 55% !important;
+    }
+
     .card__info{
         .button__card{
             margin-bottom: -24px;

@@ -3,6 +3,10 @@ footer{
         margin: 70px 8px 8px 8px;
         background-color: $black;
 
+        p{
+            margin: 0;
+        }
+
         &__grid{
             display: grid;
         }
@@ -11,12 +15,8 @@ footer{
             font-family: 'Roboto Condensed', sans-serif;
             color: white;
 
-            >p{
-                font-weight: 400;
-            }
-
             &_moscow{
-                margin: 16px 16px 0px 16px;
+                margin: 40px 16px 0px 16px;
                 width: 50%;
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;                
@@ -25,11 +25,18 @@ footer{
                     font-size: $font-med;
                     border-bottom: 1px solid #303233;
                     font-weight: 700;
-                    }                
+                    }
+            p:not(.title){
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+            }                
             }
 
             &_saintp{
-                margin: 16px 16px 0px 16px;
+                margin: 40px 16px 0px 16px;
                 width: 50%;
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;
@@ -37,6 +44,13 @@ footer{
                     font-size: $font-med;
                     border-bottom: 1px solid #303233;
                     }
+                    p:not(.title){
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 24px;
+                    }    
             }
         }
 
@@ -67,10 +81,30 @@ footer{
 
     .footer__content_moscow{
         margin-left: 50px !important;
+
+        .title{
+            margin-top: 20px;
+        }
+
+        >div{
+            >p:nth-child(2){
+                margin-top: 10px;
+            }
+        }
     }
 
     .footer__content_saintp{
         margin-left: 50px !important;
+
+        .title{
+            margin-top: 20px;
+        }
+
+        >div{
+            >p:nth-child(2){
+                margin-top: 10px;
+            }
+        }
     }
 }
 
@@ -124,10 +158,16 @@ footer{
     }
 
     .footer__content_moscow{
+        grid-gap: 20px;
 
+        >div{
+            >p:nth-child(2){
+                margin-top: 10px;
+            }
+        }
         .title{
             color: white;
-            border: none;
+            border: none !important;
             font-family: Roboto Condensed;
             font-size: 16px;
             font-style: normal;
@@ -143,6 +183,16 @@ footer{
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        >p:not(.title){            
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
@@ -150,10 +200,17 @@ footer{
     }
 
     .footer__content_saintp{
+        grid-gap: 20px;
 
+        >div{
+            >p:nth-child(2){
+                margin-top: 10px;
+            }
+        }
+        
         .title{
             color: white;
-            border: none;
+            border: none !important;
             font-family: Roboto Condensed;
             font-size: 16px;
             font-style: normal;
@@ -169,6 +226,16 @@ footer{
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        >p:not(.title){            
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;

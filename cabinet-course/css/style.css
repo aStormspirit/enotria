@@ -2216,7 +2216,7 @@ footer .footer__copyright > p {
 .body__menu_block > p {
   text-align: center;
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -2259,6 +2259,11 @@ footer .footer__copyright > p {
 .body__course {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.body__course .none .about__title {
+  margin-top: 30px;
+  margin-bottom: 44px;
 }
 
 .body__course_elem {
@@ -2399,9 +2404,71 @@ footer .footer__copyright > p {
   height: 4px;
 }
 
+.body__course_about .about__info .line .b {
+  position: relative;
+}
+
+.body__course_about .about__info .line .b .b1 {
+  position: absolute;
+  border-left: 2px solid #9B0034;
+  height: 4px;
+  top: 0;
+  left: 15%;
+}
+
+.body__course_about .about__info .line .b .b2 {
+  position: absolute;
+  border-right: 2px solid #9B0034;
+  height: 4px;
+  top: 0;
+  left: 83%;
+}
+
+.body__course_about .about__info .line .rel {
+  position: relative;
+}
+
+.body__course_about .about__info .line .rel .elem1 {
+  position: absolute;
+  width: 85%;
+  background-color: #9B0034;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
 .body__course_about .about__info .line .red {
   border-left: 2px solid #9B0034 !important;
   border-right: 2px solid #9B0034 !important;
+}
+
+.body__course_about .about__info .line .red-1 {
+  position: relative;
+}
+
+.body__course_about .about__info .line .red-1 .elem1 {
+  position: absolute;
+  width: 85%;
+  background-color: #9B0034;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 15.2%;
+}
+
+.body__course_about .about__info .line .red-2 {
+  position: relative;
+}
+
+.body__course_about .about__info .line .red-2 .elem2 {
+  position: absolute;
+  width: 85.2%;
+  background-color: #9B0034;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: -2px;
 }
 
 .body__course_about .about__info .line > th {
@@ -2648,6 +2715,31 @@ footer .footer__copyright > p {
   background-color: #303233;
 }
 
+.card_first {
+  position: relative;
+}
+
+.card_first .intro {
+  position: absolute;
+  top: -20%;
+  min-height: 32px;
+  background-color: #303233;
+  color: white;
+  left: 8%;
+}
+
+.card_first .intro > p {
+  font-family: Roboto Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .about__card {
   margin-top: 16px;
   background-color: #EDF1F2;
@@ -2713,6 +2805,12 @@ footer .footer__copyright > p {
 }
 
 @media (max-width: 1279px) {
+  .about__info_text {
+    margin-top: 37px !important;
+  }
+  .intro {
+    left: 60% !important;
+  }
   .about__grid .first > p {
     font-family: Roboto Condensed;
     font-size: 18px;

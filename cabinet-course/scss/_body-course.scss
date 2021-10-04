@@ -2,6 +2,14 @@
     margin-left: 5%;
     margin-right: 5%;
 
+    .none{
+        .about__title{
+            margin-top: 30px;
+            margin-bottom: 44px;
+        }
+    }
+
+
     &_elem{
         margin-top: 40px;
     }
@@ -116,9 +124,71 @@
             .line{
                 height: 4px;
 
+            .b{
+                position: relative;
+
+                .b1{
+                    position: absolute;
+                    border-left: 2px solid $red;
+                    height: 4px;
+                    top: 0;
+                    left: 15%;
+                }
+
+                .b2{
+                    position: absolute;
+                    border-right: 2px solid $red;
+                    height: 4px;
+                    top: 0;
+                    left: 83%;
+                }
+            }
+
+                .rel{
+                    position: relative;
+
+                    .elem1{
+                        position: absolute;
+                        width: 85%;
+                        background-color: $red;
+                        height: 4px;
+                        position: absolute;
+                        top: 0;
+                        left: 15%;
+                    }
+                }
+
                 .red{
                     border-left: 2px solid $red !important;
                     border-right: 2px solid $red !important;
+                }
+
+                .red-1{
+                    position: relative;
+
+                    .elem1{
+                        position: absolute;
+                        width: 85%;
+                        background-color: $red;
+                        height: 4px;
+                        position: absolute;
+                        top: 0;
+                        left: 15.2%;
+                    }
+                }
+
+                .red-2{
+                    position: relative;
+
+                    .elem2{
+                        position: absolute;
+                        width: 85.2%;
+                        background-color: $red;
+                        height: 4px;
+                        position: absolute;
+                        top: 0;
+                        left: -2px;
+                    }
                 }
 
                 >th{
@@ -359,6 +429,31 @@
     }
 }
 
+.card_first{
+    position: relative;
+
+    .intro{
+        position: absolute;
+        top: -20%;
+        min-height: 32px;
+        background-color: #303233;
+        color: white;
+        left: 8%;
+
+        >p{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.1em;
+            text-align: left;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+}
+
 
 .about__card{
     margin-top: 16px;
@@ -420,6 +515,13 @@
 }
 
 @include media("<desktop"){
+    .about__info_text{
+        margin-top: 37px !important;
+    }
+
+    .intro{
+        left: 60% !important;
+    }
     .about__grid{
         .first{
             >p{

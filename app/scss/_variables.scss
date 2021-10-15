@@ -1,0 +1,35 @@
+$red: #9B0034;
+$black: #000000;
+$grey-dark: #303233;
+$grey-light: #CED6D9;
+$grey: #EDF1F2;
+$white: #FFFFFF;
+$green: #1CC05E;
+
+//fonts size
+$font-sm: 0.875rem; // 14px
+$font-med: 1rem; // 16px
+
+// font-family
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+//mixins
+@mixin text-st-pc {
+    font-family: Roboto Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+@mixin text-st {
+    font-family: Roboto Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}

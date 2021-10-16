@@ -15,7 +15,6 @@ $font-med: 1rem; // 16px
 
 //mixins
 @mixin text-st-pc {
-    font-family: Roboto Condensed;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -25,7 +24,6 @@ $font-med: 1rem; // 16px
 }
 
 @mixin text-st {
-    font-family: Roboto Condensed;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

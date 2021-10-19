@@ -54,9 +54,6 @@
     }
 }
 
-.navbar__form{
-    display: none;
-}
 
 @include media("<desktop"){
     .navbar{

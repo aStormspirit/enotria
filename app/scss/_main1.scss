@@ -1,0 +1,36 @@
+.main{
+
+    &__image{
+        background-repeat: no-repeat;
+
+    }
+}
+
+@include media(">desktop"){
+    .main{
+        &__image{
+            background-image: url(../svg/main-img-pc.jpg);
+            min-height: 768px;
+            background-position: center;
+        }
+        &__image_text{
+            margin-top: 144px;
+            min-height: 170px;
+            position: absolute;
+            z-index: -1;
+            margin-left: 50px;
+            width: 95%;
+            height: 170px;
+            background-color: $red;
+        }
+    }
+}
+
+@include media("<desktop"){
+    .main{
+
+        &__image{
+            background-image: url(../svg/main-img.png);
+        }
+    }
+}

@@ -1,0 +1,169 @@
+.navbar__form{
+    width: 97%;
+    position: absolute;
+    background-color: #303233;
+    z-index: 400;
+    height: auto;
+    margin-left: 8px;
+
+    &_image{
+        display: flex;
+        justify-content: space-around;
+        margin: 32px 0px 0px 0px;
+
+    }
+
+    .none{
+        display: none;
+    }
+
+    &_section{
+        >p{
+        font-family: Roboto Condensed;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+        }
+    }
+
+    &_login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &_elem{
+        width: 90%;
+
+        >p:first-child{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $white;
+        }
+
+        >form{
+            display: flex;
+            height: 32px;
+            background-color: #EDF1F2;
+
+            >input{
+                background: none;
+                border: none;
+                width: 94%;
+            }
+        }
+    }
+
+    &_dropdown{
+        height: 24px;
+        width: 90%;
+        background-color: $red;
+        margin-top: 8px;
+
+        .drop{
+            width: 16px;
+            height: 16px;
+            background-color: $red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            rotate: 45deg;
+            margin-left: 50%;   
+        }
+    }
+
+    &_elem2{
+        width: 90%;
+
+        >p:first-child{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $white;
+        }
+
+        >form{
+            height: 32px;
+            background-color: #EDF1F2;
+            display: flex;
+
+            >input{
+                background: none;
+                border: none;
+                width: 94%;
+            }
+        }
+    }
+
+    &_link{
+        height: 72px;
+        align-items: center;
+        display: flex;
+        width: 90%;
+
+        >a{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+    }
+    .navbar__form_button{
+        margin-top: 64px;
+        width: 90%;
+        height: 42px;
+        
+        .button{
+            height: 80%;
+            width: 100%;
+            border: none;
+            background-color: $grey-light;
+        }
+    }
+
+    .navbar__form_register{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__form_footer{
+        height: 16px;
+        background-color: $red;
+    }
+    }
+
+    .visible{
+        display: none;
+    }
+
+    @include media(">desktop"){
+        .navbar__form{
+            width: 448px;
+            position: absolute;
+            background-color: #303233;
+            z-index: 400;
+            height: auto;
+            margin-left: 8px;
+            left: 760px;
+        }
+    }
+

@@ -36,9 +36,6 @@
                 @include text-st-pc;
                 color: $white;  
             }
-            >a:not(:first-child){
-                margin-left: 33px;
-            }
         }
 
         &__search{

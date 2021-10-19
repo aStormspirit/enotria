@@ -1,4 +1,4 @@
-.body{
+.main{
     margin: 0px 8px 0px 8px;
 
     &__image{
@@ -8,7 +8,6 @@
         background-repeat: no-repeat;
         width: 100%;
         background-position: center;
-        background-size: 95%;
     }
 
     &__image_text{
@@ -16,7 +15,8 @@
         min-height: 170px;
         position: absolute;
         z-index: -1;
-        width: 100%;
+        margin-left: 50px;
+        width: 95%;
         height: 170px;
         background-color: $red;
     }
@@ -107,7 +107,7 @@
 
 
 @include media(">desktop"){
-    .body{
+    .main{
 
         &__image{
             min-height: 782px;
@@ -118,7 +118,7 @@
                 min-height: 488px;
             }
 
-            .body__info{
+            .main__info{
                 padding-top: 560px;
 
                 &_button{

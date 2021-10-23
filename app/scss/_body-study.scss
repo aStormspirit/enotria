@@ -1,7 +1,5 @@
 
 .body__study{
-    margin-left: 8px;
-    margin-right: 8px;
 
     .red{
         background-color: $red !important;
@@ -22,7 +20,7 @@
     &_card{
         position: relative;
         min-height: 224px;
-        margin-top: 40px;
+        margin-top: 48px;
         display: grid;
         grid-template-columns: 50% 50%;
 
@@ -40,8 +38,6 @@
 
 .card__info{
     background-color: #EDF1F2;
-    padding: 8px;
-    display: grid;
 
     &_row{
         align-items: center;
@@ -49,11 +45,11 @@
         
 
         .row{
-            margin-left: 8px;
+            margin-left: 12px;
 
             >div:first-child{
                 font-family: Roboto Condensed;
-                font-size: 18px;
+                font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 48px;
@@ -76,12 +72,12 @@
     }
 
     >div:first-child{
-        margin-left: 6px;
+        margin-left: 8px;
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        line-height: 16px;
+        line-height: 24px;
         letter-spacing: 0em;
         text-align: left;
 
@@ -91,8 +87,9 @@
         display: flex;
 
         >div:first-child{
+            margin: 8px 0 0 8px;
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 36px;
+            font-size: 48px;
             font-style: normal;
             font-weight: 700;
             line-height: 48px;
@@ -146,6 +143,24 @@
 }
 
 @include media("<desktop"){
+
+    .border{
+        min-width: 55% !important;
+    }
+
+    .wrapper{
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .card__background_info{
+        position: absolute;
+        width: 85%;
+        min-height: 32px;
+        left: 10%;
+        top: -5%;
+    }
+
     .card__info{
         >div:first-child{
             font-size: 24px !important;
@@ -175,36 +190,16 @@
     }
 }
 
-@include media("<desktop"){
-
-    .border{
-        min-width: 55% !important;
-    }
-
-    .wrapper{
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-
-    .card__background_info{
-        position: absolute;
-        width: 85%;
-        min-height: 32px;
-        left: 10%;
-        top: -5%;
-    }
-}
-
 @include media(">desktop"){
 
     .wrapper{
-        margin-left: 37px;
-        margin-right: 37px;
+        margin: 0 120px;
     }
 
 
     .body__study_card{
-        grid-template-columns: 30% 70%;
+        width: 544px;
+        grid-template-columns: 160px 1fr;
 
         .border{
             position: absolute;
@@ -217,9 +212,27 @@
         }
     }
 
+    .card__info{
+        padding: 14px 10px;
+
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
     .card__info_row{
         >div:first-child{
-            margin-top: 11px;
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
         }
     }
 
@@ -229,26 +242,24 @@
         }
     }
 
-    .card__info{
-        >div:first-child{
-            font-family: Roboto Condensed;
-            font-size: 16px !important;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 24px !important;
-            letter-spacing: 0em;
-            text-align: left;
-        }
-    }
-
     .body__title{
         margin-top: 40px !important;
         display: grid;
-        grid-template-rows: 1fr 1fr auto;
+        grid-template-rows: min-content 1fr auto;
+
+        >p:nth-child(2) {
+            margin-top: 15px;
+        }
     }
 
     .button{
-        width: 40%;
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        width: 256px;
+        height: 40px;
     }
 
     .card__background_info{

@@ -1,6 +1,6 @@
 .body__title{
-    margin: 16px 8px 0px 8px;
-    grid-template-rows: 1fr auto;
+    margin: 16px 8px 0px 16px;
+    grid-template-rows: min-content auto;
     >p:first-child{
         font-family: Roboto Condensed;
         font-size: 24px;

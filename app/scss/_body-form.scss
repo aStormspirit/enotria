@@ -1,6 +1,5 @@
 .body__form{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 57px 120px 0;
     display: grid;
     grid-auto-rows: auto;
     grid-template-rows: auto;
@@ -53,7 +52,7 @@
             >input{
             background: none;
             border: none;
-            height: 27px;
+            height: 32px;
             width: 97%;
             }
         }
@@ -97,20 +96,21 @@
     .body__form{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 384px 384px;
+        column-gap: 100px;
     }
 
     .body__form_button{
-        width: 19%;
-        margin-top: 60px;
-        margin-left: 5%;
+        width: 256px;
+        margin: 64px 0 88px 120px;
     }
 
     .body__form_area{
-        width: 70%;
-        
         >form{
+            margin-top: 4px;
             background-color: white;
+            display: flex;
+            align-items: center;
 
             >input{
                 background-color: $grey-light;
@@ -118,6 +118,12 @@
 
             >input:hover{
                     border: $red 2px solid;
+            }
+
+            >img {
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
             }
         }
     }

@@ -1,27 +1,122 @@
 .main{
-
+    margin: 0 56px;
     &__image{
         background-repeat: no-repeat;
-
+        position: relative;
     }
 }
 
-@include media(">desktop"){
-    .main{
-        &__image{
+@include media(">desktop") {
+    .main {
+        &__image {
             background-image: url(../svg/main-img-pc.jpg);
             min-height: 768px;
             background-position: center;
         }
-        &__image_text{
-            margin-top: 144px;
+
+        &__image_text {
+            width: 100%;
+            height: 488px;
             min-height: 170px;
+            margin-top: 200px;
+            background-color: $red;
             position: absolute;
             z-index: -1;
-            margin-left: 50px;
-            width: 95%;
-            height: 170px;
-            background-color: $red;
+        }
+    
+        &__info {
+            width: 100%;
+            height: 100%;
+            padding: 248px 0 88px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 200;
+    
+            &_button {
+                height: 56px;
+                width: 56px;
+                margin-bottom: 128px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                >img{
+                    width: 8.49px;
+                    height: 14.14px;
+                }
+            }
+    
+            &_button:first-child {
+                margin-left: 24px;
+                margin-right: auto;
+            }
+    
+            &_button:last-child {
+                margin-right: 24px;
+            }
+    
+            &_text {
+                max-width: 250px;
+                display: flex;
+                flex-direction: column;
+                >div {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: $white;
+                    align-items: center;
+                }
+                >p:first-child {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 40px;
+                    line-height: 48px;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin-bottom: 34px;
+                }
+                >p {
+                    color: $white;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0.2em;
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+                >button {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: $white;
+                    width: 160px;
+                    height: 40px;
+                    margin-top: 20px;
+                    background-color: $red;
+                    border: none;
+                }
+            }
+
+            &_slides {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 48px;
+                color: $white;
+                min-height: 448px;
+                margin: 0 116px 0 135px;
+            }
         }
     }
 }

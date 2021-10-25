@@ -109,11 +109,13 @@
  */
 #menu
 {
-  position: absolute;
+  position: fixed;
   width: 264px;
-  margin: -100px 0 0 -280px;
+  margin: 0;
   padding: 50px;
   padding-top: 125px;
+  top: 0;
+  left: 0;
   
   background: #303233;
   list-style-type: none;

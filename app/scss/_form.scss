@@ -190,21 +190,197 @@
         height: 16px;
         background-color: $red;
     }
-    }
+}
 
-    .visible{
-        display: none;
-    }
+.visible{
+    display: none;
+}
 
-    @include media(">desktop"){
-        .navbar__form{
-            width: 448px;
-            position: absolute;
-            background-color: #303233;
-            z-index: 400;
-            height: auto;
-            margin-left: 8px;
-            left: 760px;
+@include media("<desktop"){
+    .navbar__form{
+        width: 304px;
+        position: absolute;
+        background-color: #303233;
+        z-index: 400;
+        height: auto;
+        margin: 0 8px;
+    
+        &_image{
+            display: flex;
+            justify-content: flex-start;
+            margin: 32px 0px 15px 16px;
+    
+        }
+    
+        .none{
+            display: none;
+        }
+    
+        &_section{
+            >p{
+                margin-top: 8px;
+            }
+        }
+
+        &_section:first-child{
+            margin-right: 48px;
+        }
+    
+        &_login{
+            margin-top: 30px;
+
+            div.navbar__form_button{
+                margin: 29px 16px 33px;
+
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+    
+        &_elem{
+            margin: 0 16px;
+    
+    
+            >p:first-child{
+                margin-bottom: 4px;
+            }
+    
+            >form{
+                background-color: #EDF1F2;
+    
+                >input{
+                    border: none;
+                    width: 352px;
+                    height: 100%;
+                }
+    
+                >img {
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 0px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    
+        &_dropdown{
+            width: 272px;
+            margin: -10px 16px 27px;
+            position: relative;
+    
+            >p {
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 24px;
+                color: $white;
+                text-align: center;
+            }
+    
+            .drop{
+                width: 16px;
+                height: 16px;
+                background-color: $red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 6px;
+                left: 50%;
+                transform: rotate(45deg) translateX(-50%);
+                z-index: -1;
+            }
+        }
+    
+        &_elem2{
+            margin: 0 16px;
+    
+            >p:first-child{
+                margin-bottom: 4px;
+            }
+    
+            >form{
+                background-color: #EDF1F2;
+    
+                >input{
+                    border: none;
+                    width: 352px;
+                    height: 100%;
+                }
+    
+                >img {
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 0px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    
+        &_link{
+            align-items: center;
+            display: flex;
+            width: 90%;
+            margin-left: 16px;
+            margin-top: 6px;
+    
+            >a{
+                font-family: Roboto Condensed;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $grey-light;
+                text-decoration: underline;
+            }
+        }
+        .navbar__form_button{
+            margin: 64px 16px 27px;
+            height: 40px;
+            
+            .button{
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #303233;
+                height: 100%;
+                width: 100%;
+                border: none;
+                background-color: $grey-light;
+            }
+        }
+    
+        .navbar__form_register{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    
+        .navbar__form_footer{
+            height: 16px;
+            background-color: $red;
         }
     }
+    
+}
+
+
+@include media(">desktop"){
+    .navbar__form{
+        width: 448px;
+        position: absolute;
+        background-color: #303233;
+        z-index: 400;
+        height: auto;
+        margin-left: 8px;
+        left: 760px;
+    }
+}
 

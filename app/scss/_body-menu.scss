@@ -6,8 +6,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 500;
-
+    
     &_block:nth-child(2) { /* Нужно сменить на _block_current или типа того*/
         background-color: black;
 
@@ -55,7 +54,6 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        z-index: 500;
     
         &_block:nth-child(2) { /* Нужно сменить на _block_current или типа того*/
             background-color: black;

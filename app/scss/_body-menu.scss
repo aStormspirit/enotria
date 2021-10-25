@@ -7,7 +7,7 @@
     align-items: center;
     position: relative;
     
-    &_block:nth-child(2) { /* Нужно сменить на _block_current или типа того*/
+    &_block_current {
         background-color: black;
 
         >p{
@@ -15,7 +15,7 @@
             font-family: Roboto;
         }
 
-        >div{
+        >div:not(.plus){
             width: 16px;
             height: 16px;
             background-color: black;
@@ -55,7 +55,7 @@
         align-items: center;
         position: relative;
     
-        &_block:nth-child(2) { /* Нужно сменить на _block_current или типа того*/
+        &_block_current {
             background-color: black;
     
             >p{
@@ -63,7 +63,7 @@
                 font-family: Roboto;
             }
     
-            >div{
+            >div:not(.plus){
                 width: 16px;
                 height: 16px;
                 background-color: black;

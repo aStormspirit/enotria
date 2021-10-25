@@ -71,14 +71,15 @@
         }
 
         >div:first-child{
-            margin-left: 8px;
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 16px;
             font-style: normal;
             font-weight: 700;
+            font-size: 16px;
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
+            max-width: 104px;
+            margin-left: 8px;
 
         }
 
@@ -249,8 +250,13 @@
 
 @include media(">desktop"){
 
-    .wrapper{
-        margin: 0 120px;
+    .wrapper {
+        max-width: 1120px;
+        margin: 16px auto 0;
+    }
+
+    .wrapper:nth-child(3) {
+        margin: 0 auto;
     }
 
 
@@ -259,13 +265,13 @@
         grid-template-columns: 160px 1fr;
 
         .border{
-            position: absolute;
-            z-index: -1;
-            min-width: 50%;
             border: 2px solid $red;
-            min-height: 110%;
-            top: -5%;
-            left: -2%;
+            position: absolute;
+            top: -16px;
+            bottom: -16px;
+            left: -16px;
+            right: 50%;
+            z-index: -1;
         }
     }
 
@@ -315,17 +321,119 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        width: 256px;
+        width: 100%;
         height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        >button {
+            width: 256px;
+            flex-grow: 0;
+        }
+    }
+
+    .card__background {
+        position: relative;
+
+        .new {
+            width: 80px;
+            height: 32px;
+            background-color: $red;
+            position: absolute;
+            top: -16px;
+            left: 16px;
+
+
+            >p {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 32px;
+                color: $white;
+                text-align: center;
+            }
+        }
     }
 
     .card__background_info{
         background-color: $red;
         position: absolute;
         padding: 2px;
-        min-height: 48px;
-        min-width: 96px;
+        width: 96px;
+        height: 104px;
         right: 16px;
         top: -16px;
+    }
+
+    .card__background_info.place{
+        width: 96px;
+        height: 104px;
+        padding: 12px 16px 0;
+        background-color: #1CC05E;
+        position: absolute;
+        right: 16px;
+        top: -16px;
+        flex-direction: column;
+
+        p {
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            color: #FFFFFF;
+        }
+
+        >div:last-child {
+            display: flex;
+            justify-content: end;
+
+            >p:first-child {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 48px;
+                margin-top: 6px;
+            }
+
+            >p:last-child {
+                margin-top: 12px;
+            }
+        }
+
+    }
+
+    .card__info_course {
+        display: flex;
+        flex-direction: column;
+
+        .card__info_price {
+            >div {
+                width: 100%;
+                margin: 8px 7px 0 0 !important;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 24px;
+                text-align: right;
+                margin: 46px 0 0 0;
+            }
+        }
+
+        .button__card {
+            width: 128px;
+            height: 32px;
+            margin: 11px auto 0;
+
+            >button {
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                height: 100%;
+            }
+        }
     }
 }

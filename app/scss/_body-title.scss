@@ -25,7 +25,6 @@
     }
 
     .button{
-        background-color: #303233;
 
         >button{
             font-family: Roboto Condensed;
@@ -34,9 +33,9 @@
             min-height: 40px;
             padding: 4px;
             color: $white;
-            background: none;
+            background-color: #303233;
             border: none;
-            width: 100%;
+            width: 256px;
         }
     }
 }

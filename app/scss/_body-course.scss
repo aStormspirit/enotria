@@ -1,11 +1,10 @@
 .body__course{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 120px;
 
     .none{
         .about__title{
-            margin-top: 30px;
-            margin-bottom: 44px;
+            margin-top: 52px;
+            margin-bottom: 28px;
         }
     }
 
@@ -17,17 +16,17 @@
     &_about{
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 45px;
 
         .about__text{
-            min-height: 40px;
+            height: 104px;
             display: flex;
             background-color: $red;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
 
             >p:first-child{
-                margin-left: 8px;
+                margin-bottom: 10px;
                 color: $white;
                 font-family: 'Roboto Condensed', sans-serif;
                 font-size: 24px;
@@ -40,9 +39,9 @@
 
             >p:nth-child(2){
                 font-family: 'Roboto Condensed', sans-serif;
-                font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
+                font-size: 20px;
                 line-height: 16px;
                 letter-spacing: 0em;
                 text-align: left;
@@ -56,9 +55,9 @@
 
         >p{
             font-family: 'Roboto Condensed', sans-serif;
-            font-size: 18px;
             font-style: normal;
             font-weight: 700;
+            font-size: 24px;
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
@@ -66,7 +65,7 @@
         }
 
         .about__text2{
-            min-height: 32px;
+            height: 104px;
             border: 2px black solid;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 14px;
@@ -81,15 +80,8 @@
 
         .about__block{
             display: grid;
-            grid-template-columns: 50% 50%;
-
-            .text1{
-                margin-right: 8px;
-            }
-
-            .text2{
-                margin-left: 8px;
-            }
+            grid-template-columns: 256px 256px;
+            column-gap: 32px;
         }
 
         .about__info{
@@ -111,9 +103,23 @@
             }
 
             .table{
-                margin-top: 19px;
+                margin-top: 18px;
                 >table{
                     width: 100%;
+                }
+
+                & tr:not(.line) th {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    height: 34px;
+                    margin-bottom: 10px;
+                }
+
+                & tr:not(.line):last-child th {
+                    font-size: 16px;
                 }
             }
 
@@ -221,46 +227,54 @@
                 }
             }
 
-            .about__info_text{
-                margin-top: 64px;
+            .about__info_text {
+                margin-top: 75px;
             
-            >p:first-child{
-                font-family: 'Roboto Condensed', sans-serif;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 24px;
-                letter-spacing: 0em;
-                text-align: left;
+                >p:first-child{
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
 
+                }
+
+                >p:nth-child(2){
+                    margin-top: 8px;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
             }
 
-            >p:nth-child(2){
-                margin-top: 8px;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0em;
-                text-align: left;
+            .about__info_text:nth-child(2) {
+                margin-top: 65px;
             }
-        }
 
             .course__info{
-                >div{
-                margin-top: 24px;
-                border: gray 2px solid;
-                text-align: center;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0em;
-                text-align: center;
-                color: #303233;
-                padding: auto;
+                >div {
+                    margin-top: 81px;
+                    border: gray 2px solid;
+                    text-align: center;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: #303233;
+                    padding: 14px;
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
                 }
             }
         }
@@ -277,10 +291,8 @@
             display: grid;
 
             >div{
-                margin: 16px;
 
                 >button{
-                    padding: 6px;
                     color: white;
                     width: 100%;
                     background-color: #1CC05E;
@@ -351,7 +363,6 @@
     }
 
     .elem__text{
-        margin-top: 16px;
         display: flex;
         flex-direction: column;
 
@@ -378,7 +389,7 @@
         }
 
         >button{
-            min-height: 24px;
+            height: 40px;
             background-color: #CED6D9;
             border: none;
             margin-top: 8px;
@@ -433,23 +444,22 @@
     position: relative;
 
     .intro{
-        position: absolute;
-        top: -20%;
-        min-height: 32px;
+        color: $white;
+        width: 184px;
+        height: 32px;
         background-color: #303233;
-        color: white;
-        left: 8%;
+        position: absolute;
+        top: -24px;
+        left: 96px;
 
         >p{
             font-family: Roboto Condensed;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 32px;
             letter-spacing: 0.1em;
-            text-align: left;
-            padding-left: 8px;
-            padding-right: 8px;
+            text-align: center;
         }
     }
 }
@@ -469,6 +479,7 @@
         letter-spacing: 0em;
         text-align: left;
         color: #303233;
+        margin-top: 16px;
     }
 
     >p:nth-child(2){
@@ -480,12 +491,25 @@
         letter-spacing: 0em;
         text-align: left;
         color: #303233;
+        margin-top: 16px;
+    }
+
+    >p:nth-child(3){
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #303233;
+        margin-top: 20px;
     }
 
     .about__card_flex{
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: flex-start;
 
         >p{
             font-family: 'Roboto Condensed', sans-serif;
@@ -496,6 +520,7 @@
             letter-spacing: 0em;
             text-align: left;
             color: #303233;
+            margin-top: 18px;
         }
     
 
@@ -510,57 +535,316 @@
             background-color: #1CC05E;
             padding: 4px 8px 4px 8px;
             color: $white;
+            width: 112px;
+            height: 32px;
+            margin-top: 16px;
         }
     }
 }
 
 @include media("<desktop"){
-
-    .about__info_text{
-        margin-top: 37px !important;
-    }
-
-    .intro{
-        left: 45% !important;
-        >p{
-            margin: 0;
-        }
-        top: -10% !important;
-    }
+    .body__course{
+        margin: 0 24px;
     
-    .about__grid{
-        .first{
-            >p{
-                font-family: Roboto Condensed;
-                font-size: 18px;
+        .elem__image{
+            min-height: 136px;
+            display: grid;
+            grid-auto-columns: auto;
+            grid-template-columns: 128px 1fr;
+    
+            &_info{
+                background-color: #EDF1F2;
+                display: grid;
+    
+                >div{
+    
+                    >button{
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 24px;
+                        width: 112px;
+                        height: 24px;
+                        margin: 0 auto;
+                    }
+                }
+    
+                >div:first-child{
+                    margin-top: 9px;
+                    margin-left: 8px;
+                    width: 90px;
+                }
+    
+                >div:nth-child(2){
+    
+                    >p{
+                        margin-top: 16px;
+                        margin-right: 8px;
+                    }
+                }
+    
+                >div:last-child {
+                    margin: -5px auto 0;
+                }
+    
+            }
+        }
+    
+        .elem__text{
+    
+            >p:first-child{
+                margin-top: 15px;
+            }
+    
+            >p:nth-child(2){
+                margin-top: 8px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 16px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0em;
                 text-align: left;
+    
             }
     
-            .about__text2{
+            >button{
+                height: 24px;
+                background-color: #CED6D9;
+                border: none;
                 margin-top: 8px;
             }
         }
     
-        .about__block{
-            margin-top: 16px;
+        .none{
+            .about__title{
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 36px;
+                margin-bottom: 12px;
+            }
+
+            .intro{
+                width: 144px;
+                height: 32px;
+                position: absolute;
+                top: -16px;
+                right: 8px;
+                left: auto;
+        
+                >p{
+                    font-size: 14px;
+                    line-height: 32px;
+                }
+            }
+
+            .about__card{
+                margin-top: 16px;
+                background-color: #EDF1F2;
+                padding: 8px;
+
+                >p:first-child {
+                    margin-top: 0;
+                }
+
+                >p:nth-child(2) {
+                    margin-top: 8px;
+                }
+
+                .about__card_flex {
+
+                    >p{
+                        margin-top: 12px;
+                    }
+                
+
+                    >div{
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+            .about__card.card_first{
+            
+                >p:nth-child(2) {
+                    margin-top: 0px;
+                }
+
+                >p:nth-child(3) {
+                    margin-top: 6px;
+                }
+
+                .about__card_flex {
+
+                    >p{
+                        margin-top: 14px;
+                    }
+                
+
+                    >div{
+                        margin-top: 10px;
+                    }
+                }
+            }
         }
 
-        .second{
-            >p{
+        
+        &_about{
+            display: flex;
+            flex-direction: column;
+            margin-top: 32px;
+    
+            .first > p:first-child{
                 font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: bold;
                 font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0em;
+                color: #303233;
+            }
+
+    
+            .about__text{
+                height: 40px;
+                display: flex;
+                background-color: $red;
+                justify-content: center;
+                align-items: center;
+
+                > p:first-child{
+                    font-size: 24px;
+                    line-height: 40px;
+                    margin: 0 10px 0 11px;
+                }
+
+                >p:nth-child(2){
+                    font-size: 14px;
+                    line-height: 40px;
+                    justify-content: center;
+                    display: revert;
+                    width: 100%;
+                    margin-left: 15px;
+                }
+            }
+    
+            >p{
+                font-family: 'Roboto Condensed', sans-serif;
                 font-style: normal;
                 font-weight: 700;
+                font-size: 24px;
                 line-height: 24px;
                 letter-spacing: 0em;
                 text-align: left;
+    
+            }
+    
+            .about__text2{
+                height: 32px;
+                margin-top: 10px;
+            }
+    
+            .about__block{
+                margin-top: 15px;
+                grid-template-columns: 128px 128px;
+                column-gap: 16px;
+
+                .about__text{
+                    height: 40px;
+                    display: flex;
+                    background-color: $red;
+                    justify-content: center;
+                    align-items: center;
+    
+                    > p:first-child{
+                        width: 56px;
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+    
+                    >p:nth-child(2){
+                        font-size: 14px;
+                        line-height: 40px;
+                        justify-content: center;
+                        display: revert;
+                        width: 100%;
+                        margin-left: -4px;
+                    }
+                }
+            }
+
+            .second {
+                p:first-child {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    color: #303233;
+                    margin-top: 15px;
+                }
+
+                .about__text2{
+                    height: 48px;
+                    margin-top: 0;
+
+                    >p {
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-top: 0;
+                    }
+                }
+            }
+    
+            .about__info{
+    
+                .about__info_text {
+                    margin-top: 31px;
+                
+                    >p:first-child{
+                        font-size: 18px;
+                        line-height: 24px;
+                        max-width: 190px;
+                    }
+    
+                    >p:nth-child(2){
+                        margin-top: 8px;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
+    
+                .about__info_text:nth-child(2) {
+                    margin-top: 33px;
+                }
+    
+                .course__info{
+                    >div {
+                        min-height: 104px;
+                        padding: 10px 0;
+                        margin-top: 16px;
+                    }
+
+                    >div:first-child {
+                        margin-top: 33px;
+                    }
+
+                    >div:nth-child(2) {
+                        padding: 10px 25px;
+                    }
+                }
             }
         }
     }
+
+
 }
 
 @include media(">desktop"){
@@ -572,17 +856,25 @@
             display: flex;
 
             .elem__image{
+                margin-top: 8px;
                 margin-right: 32px;
-                width: 75%;
-                grid-template-columns: 30% 70%;
+                width: 544px;
+                grid-template-columns: 160px auto;
+                flex-shrink: 0;
 
                 &_info{
                     >div:first-child{
-                        width: 42%;
+                        margin: 14px 0 0 16px;
+                        width: 100px;
+
+                        >p {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
                     }
 
                     >div:nth-child(2){
-                        margin-right: 16px;
+                        margin: 55px 16px 0 0;
 
                         >p{
                             margin: 0;
@@ -595,18 +887,42 @@
                             text-align: right;
                         }
                     }
+
+                    >div:nth-child(3){
+                        margin: 11px 16px 16px;
+                        padding: 0;
+
+                        >button {
+                            font-family: Roboto Condensed;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 32px;
+                            height: 32px;
+                        }
+                    }
                 }
             }
 
             .elem__text{
                 display: grid;
+                grid-template-rows: min-content 1fr min-content;
 
                 >p:first-child{
                     margin: 0;
                 }
 
+                >p:nth-child(2) {
+                    margin-top: 14px;
+                }
+
                 >button{
-                    width: 40%;
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    width: 256px;
                 }
             }
         }
@@ -615,7 +931,7 @@
         .about__grid{
             display: grid;
             grid-auto-columns: auto;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 256px 544px 256px;
             grid-gap: 32px;
         }
 
@@ -629,7 +945,6 @@
             height: 72px;
 
             >p:first-child{
-                margin-top: 15px;
                 font-family: Roboto Condensed;
                 font-size: 48px !important;
                 font-style: normal;
@@ -637,10 +952,6 @@
                 line-height: 24px !important;
                 letter-spacing: 0em !important;
                 text-align: center !important;
-            }
-
-            >p:nth-child(2){
-                padding-bottom: 8px;
             }
         }
 
@@ -683,6 +994,7 @@
                     line-height: 16px;
                     letter-spacing: 0em;
                     text-align: center;
+                    width: 120px;
                 }
             }
         }
@@ -728,9 +1040,10 @@
 
         .about__card{
             min-height: 88px;
-            align-items: center;
+            padding: 0 16px;
             display: grid;
-            grid-template-columns: 121px auto 210px;
+            grid-template-columns: 64px 720px 1fr;
+            column-gap: 32px;
         }
     
 }

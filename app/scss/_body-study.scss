@@ -1,4 +1,3 @@
-
 .body__study{
 
     .red{
@@ -34,159 +33,217 @@
             left: -2%;
         }
 
-}
+    }
 
-.card__info{
-    background-color: #EDF1F2;
+    .card__info{
+        background-color: #EDF1F2;
 
-    &_row{
-        align-items: center;
-        margin-bottom: 60px;
-        
+        &_row{
+            align-items: center;
+            margin-bottom: 60px;
+            
 
-        .row{
-            margin-left: 12px;
+            .row{
+                margin-left: 12px;
+
+                >div:first-child{
+                    font-family: Roboto Condensed;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 48px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #F24724;
+                }
+
+                >div:nth-child(2){
+                    font-family: Roboto Condensed;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #555859;
+                }
+            }
+        }
+
+        >div:first-child{
+            margin-left: 8px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+
+        >div:nth-child(2){
+            display: flex;
 
             >div:first-child{
-                font-family: Roboto Condensed;
-                font-size: 24px;
+                margin: 8px 0 0 8px;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 48px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 48px;
                 letter-spacing: 0em;
                 text-align: left;
-                color: #F24724;
             }
 
-            >div:nth-child(2){
+        }
+
+        .button__card{
+            >button{
+                min-height: 24px;
+                color: white;
+                width: 100%;
+                border: none;
+                background-color: #303233;
+            }
+        }
+    }
+
+    .card__background{
+        background-image: url(../svg/course.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .good{
+            background-color: #1CC05E !important;
+        }
+
+        &_info{
+            width: 96px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            background-color: $red;
+            justify-content: center;
+            >p{
                 font-family: Roboto Condensed;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 24px;
+                line-height: 16px;
                 letter-spacing: 0em;
-                text-align: left;
-                color: #555859;
+                text-align: center;
+                color: white;
             }
         }
     }
-
-    >div:first-child{
-        margin-left: 8px;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
-
-    }
-
-    >div:nth-child(2){
-        display: flex;
-
-        >div:first-child{
-            margin: 8px 0 0 8px;
-            font-family: 'Roboto Condensed', sans-serif;
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 48px;
-            letter-spacing: 0em;
-            text-align: left;
-        }
-
-    }
-
-    .button__card{
-        >button{
-            min-height: 24px;
-            color: white;
-            width: 100%;
-            border: none;
-            background-color: #303233;
-        }
-    }
-}
-
-.card__background{
-    background-image: url(../svg/course.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    .good{
-        background-color: #1CC05E !important;
-    }
-
-    &_info{
-        display: flex;
-        align-items: center;
-        padding-left: 8px;
-        padding-right: 8px;
-        background-color: $red;
-        justify-content: center;
-        >p{
-            font-family: Roboto Condensed;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 16px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: white;
-        }
-    }
-}
 
 }
 
 @include media("<desktop"){
-
-    .border{
-        min-width: 55% !important;
+    .wrapper {
+        margin: 0 24px;
     }
 
-    .wrapper{
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-
-    .card__background_info{
-        position: absolute;
-        width: 85%;
-        min-height: 32px;
-        left: 10%;
-        top: -5%;
-    }
-
-    .card__info{
-        >div:first-child{
-            font-size: 24px !important;
-
-            >p:nth-child(2){
-                margin-top: 12px;
-            }
-        }
-        &_row{
+    .body__study{
+    
+        &_card{
+            min-height: 136px;
             margin-top: 40px;
-            >div:first-child{
-                margin-top: 10px;
-                font-size: 64px !important;
-            }
-
-            .row{
-                >div:first-child{
-                    font-size: 32px !important;
+            grid-template-columns: 128px 1fr;
+    
+        }
+        
+        .card__info{
+            background-color: #EDF1F2;
+        
+            &_row{
+                align-items: center;
+                margin-top: 15px;
+                margin-bottom: 10px;
+        
+                .row{
+                    margin-left: 10px;
+        
+                    >div:first-child{
+                        font-size: 18px;
+                        line-height: 18px;
+                        margin-bottom: -5px;
+                    }
+        
+                    >div:nth-child(2){
+                        font-family: Roboto Condensed;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: #555859;
+                    }
                 }
-                >div:nth-child(2){
-                    margin-top: -13px;
-                    font-size: 24px !important;
+            }
+        
+            >div:first-child{
+                font-size: 14px;
+                line-height: 16px;
+                margin-top: 11px;
+                margin-left: 8px;
+            }
+        
+            >div:nth-child(2){
+                display: flex;
+        
+                >div:first-child{
+                    font-size: 36px;
+                    line-height: 36px;
+                    margin: 0 0 0 9px;
+                }
+        
+            }
+        
+            .button__card{
+                >button{
+                    min-height: 24px;
+                    color: white;
+                    width: 100%;
+                    border: none;
+                    background-color: #303233;
                 }
             }
         }
-
+        
+        .card__background{
+            background-image: url(../svg/course.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        
+            .good{
+                background-color: #1CC05E !important;
+            }
+        
+            &_info{
+                width: 96px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                background-color: $red;
+                justify-content: center;
+                >p{
+                    font-family: Roboto Condensed;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: white;
+                }
+            }
+        }
+    
     }
 }
 
@@ -268,7 +325,7 @@
         padding: 2px;
         min-height: 48px;
         min-width: 96px;
-        left: 70%;
-        top: -10%;
+        right: 16px;
+        top: -16px;
     }
 }

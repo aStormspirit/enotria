@@ -22,7 +22,7 @@
             background-color: black;
             position: absolute;
             bottom: -8px;
-            rotate: 45deg;
+            transform: rotate(45deg);
         }
     }
 
@@ -33,28 +33,81 @@
         justify-content: center;
         align-items: center;
         position: relative;
-    >p{
-        text-align: center;
-        font-family: Roboto Condensed;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
+        >p{
+            text-align: center;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+
+        }
 
     }
-
-}
 }
 
 @include media("<desktop"){
-    .body__menu_block{
-        >p{
-            font-size: 10px;
+    .body__menu{
+        height: 32px;
+        margin: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 500;
+    
+        &_block:nth-child(2) { /* Нужно сменить на _block_current или типа того*/
+            background-color: black;
+    
+            >p{
+                color: white;
+                font-family: Roboto;
+            }
+    
+            >div{
+                width: 16px;
+                height: 16px;
+                background-color: black;
+                position: absolute;
+                bottom: -1px;
+                transform: rotate(45deg);
+                z-index: -1;
+            }
         }
-    }
-    .plus{
-        display: none;
+    
+        &_block{
+            width: auto;
+            min-width: 64px;
+            height: 32px;
+            padding: 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            >p{
+                font-size: 12px;
+                line-height: 24px;
+            }
+    
+        }
+
+        .plus{
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            letter-spacing: 0em;
+            text-align: center;
+            width: 32px;
+            background-color: $red;
+            position: absolute;
+            top: -16px;
+            right: 8px;
+
+        }
     }
 }
 

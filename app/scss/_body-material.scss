@@ -1,10 +1,11 @@
 .body__material{
-    display: flex;
-    margin: 40px 8px 16px 8px;
+    height: 88px;
+    padding: 0 24px;
+    margin: 0 120px 16px;
     background-color: #EDF1F2;
-    padding: 8px;
+    display: flex;
+    align-items: center;
     position: relative;
-    min-height: 88px;
 
     >p{
         margin-left: 16px;
@@ -16,33 +17,80 @@
         letter-spacing: 0em;
         text-align: left;
     }
+
     .new{
-        position: absolute;
-        background-color: $red;
-        left: 8%;
-        top: -18%;
-        padding-left: 8px;
-        padding-right: 8px;
-        color: white;
         font-family: Roboto;
-        font-size: 14px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 32px;
+        color: white;
         letter-spacing: 0em;
         text-align: center;
+        width: 80px;
+        height: 32px;
+        background-color: $red;
+        position: absolute;
+        top: -16px;
+        left: 112px;
 
     }
 }
 
 @include media("<desktop"){
+    .wrapper{
+        & + .body__material {
+            margin-top: 40px;
+        }
+    }
+
+    .body__material{
+        height: auto;
+        padding: 15px 16px 0;
+        margin: 0 24px 16px;
+        align-items: flex-start;
     
+        >p{
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 200px;
+            margin-left: 15px;
+            margin-bottom: 8px;
+        }
+    
+        .new{
+            font-size: 14px;
+            line-height: 24px;
+            height: 24px;
+            top: -12px;
+            left: 57px;
+    
+        }
+
+        &_img {
+            max-width: 24px;
+            margin: 10px 0 0 0;
+            >img:first-child {
+                width: 22px;
+                height: 24px;
+                margin-bottom: 4px;
+            }
+            >img:last-child {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
 }
 
 @include media(">desktop"){
     .wrapper{
         display: grid;
         grid-template-columns: 50% 50%;
+
+        & + .body__material {
+            margin-top: 96px;
+        }
     }
 
     .body__material{
@@ -51,13 +99,27 @@
 
         >p{
             width: 780px;
-            margin-top: 12px;
+            margin-left: 49px;
+            margin-top: -4px;
         }
 
-        .hide-for-mobile{
+        .hide-for-mobile {
+            width: 36.67px;
+            height: 40px;
+
             >img{
-                width: 100%;
-                margin-top: 12px;
+                width: 36.67px;
+                height: 40px;
+            }
+        }
+
+        .hide-for-mobile:last-child {
+            width: 41px;
+            height: 41px;
+
+            >img{
+                width: 41px;
+                height: 41px;
             }
         }
     }

@@ -1,18 +1,18 @@
-.body__form{
+.body__form {
     margin: 57px 120px 0;
     display: grid;
     grid-auto-rows: auto;
     grid-template-rows: auto;
     grid-gap: 20px;
 
-    &_alert{
+    &_alert {
         display: none;
         background-color: $red;
         margin-top: 8px;
         height: 24px;
         position: relative;
 
-        >div{
+        >div {
             height: 16px;
             width: 16px;
             background-color: $red;
@@ -24,7 +24,10 @@
             z-index: 0;
         }
 
-        >p{
+        >p {
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: normal;
             color: $white;
             z-index: 100;
             position: sticky;
@@ -33,9 +36,9 @@
         
     }
 
-    &_area{
+    &_area {
 
-        >p{
+        >p {
             color: $grey-dark;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 16px;
@@ -46,10 +49,10 @@
             text-align: left;
         }
 
-        >form{
+        >form {
             display: flex;
 
-            >input{
+            >input {
             background: none;
             border: none;
             height: 32px;
@@ -62,7 +65,7 @@
         margin: 24px 8px 0px 8px;
         height: 40px;
 
-        >button{
+        >button {
             color: $grey-dark;
             width: 100%;
             height: 100%;
@@ -81,13 +84,55 @@
 }
 
 @include media("<desktop"){
-    .body__form_area{
-        >form{
-            background-color: $grey-light;
+    .body__form {
+        margin: 18px 24px 0;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    
+        &_alert {
+    
+            >div {
+                height: 16px;
+                width: 16px;
+                background-color: $red;
+                position: absolute;
+                left: 50%;
+                top: 4px;
+                transform: rotate(45deg) translateX(-50%);
+                z-index: 0;
+            }
+    
+            >p{
+                font-size: 12px;
+                line-height: 24px;
+            }
+            
         }
-        >form:hover{
-            border: $red 2px solid;
+    
+        &_area{
+    
+            >p{
+                margin-bottom: 4px;
+            }
+    
+            >form{
+                background-color: #ced6d9;
+
+                >img {
+                    width: 24px;
+                    height: 24px;
+                    margin: 4px 6px 0 0;
+                }
+            }
         }
+    
+        &_button{
+            margin: 32px 24px 0px;
+            height: 40px;
+        }
+        
     }
 
 }
@@ -108,7 +153,7 @@
     .body__form_area{
         >form{
             margin-top: 4px;
-            background-color: white;
+            background-color: $white;
             display: flex;
             align-items: center;
 

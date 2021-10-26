@@ -24,6 +24,10 @@
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr;
 
+        >div {
+            cursor: pointer;
+        }
+
         .navbar__icon_elem1{
             background-color: $black;
         }

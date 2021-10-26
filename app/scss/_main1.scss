@@ -11,11 +11,12 @@
         position: relative;
 
         &__image {
-            background-image: url(../svg/main-img-pc.jpg);
             min-height: 768px;
             background-position: center;
             width: 1120px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
         }
 
         &__image_text {
@@ -32,11 +33,25 @@
         &__info {
             width: 100%;
             height: 100%;
-            padding: 248px 0 88px;
+            flex-grow: 1;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            z-index: 200;
+            overflow: hidden;
+
+            .swiper-wrapper {
+                z-index: 0;
+            }
+
+            .swiper-slide {
+                position: relative;
+            }
+
+            &_image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
     
             &_button {
                 height: 56px;
@@ -46,25 +61,32 @@
                 align-items: center;
                 justify-content: center;
                 background-color: $white;
+                position: absolute;
+                top: 512px;
+                cursor: pointer;
+
                 >img{
                     width: 8.49px;
                     height: 14.14px;
                 }
-            }
-    
-            &_button:first-child {
-                margin-left: -40px;
-                margin-right: auto;
-            }
-    
-            &_button:last-child {
-                margin-right: -40px;
+
+                &_left {
+                    left: -40px;
+                }
+
+                &_right {
+                    right: -40px;
+                }
             }
     
             &_text {
                 max-width: 250px;
                 display: flex;
                 flex-direction: column;
+                position: absolute;
+                bottom: 88px;
+                left: 576px;
+
                 >div {
                     font-family: Roboto Condensed;
                     font-style: normal;
@@ -112,15 +134,36 @@
                 }
             }
 
-            &_slides {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 48px;
-                color: $white;
+            &_slides.swiper-pagination-bullets.swiper-pagination-horizontal {
+                width: max-content;
                 min-height: 448px;
-                margin: 0 116px 0 135px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 248px;
+                bottom: auto;
+                right: 132px;
+                left: auto;
+
+                .swiper-pagination-bullet {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 48px;
+                    color: $white;
+                    margin: 0;
+                    display: inline;
+                    width: max-content;
+                    height: auto;
+                    background: none;
+                    opacity: 1;
+
+                    &-active {
+                        color: $red;
+                    }
+                }
             }
         }
     }
@@ -130,18 +173,24 @@
     .main{
         height: 368px;
         margin: 0 8px;
+        position: relative;
 
         &__image{
+            width: 272px;
             height: 100%;
-            background-image: url(../svg/main-img.png);
+            margin: 0 auto;
             background-position: center;
+            display: flex;
+            flex-direction: column;
 
             &_text {
-                width: 100%;
                 height: 170px;
+                margin: 0;
                 background: #9B0034;
                 position: absolute;
                 top: 144px;
+                left: 0;
+                right: 0;
                 z-index: -1;
             }
         }
@@ -150,14 +199,24 @@
         
     
         &__info {
-            width: 288px;
+            width: 100%;
             height: 100%;
-            padding: 163px 0 56px;
+            flex-grow: 1;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            z-index: 200;
+            overflow: hidden;
+
+            .swiper-slide {
+                position: relative;
+            }
+
+            &_image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
     
             &_button {
                 height: 24px;
@@ -167,25 +226,32 @@
                 align-items: center;
                 justify-content: center;
                 background-color: $white;
+                position: absolute;
+                top: 224px;
+                cursor: pointer;
+
                 >img{
                     width: 5px;
                     height: 8px;
                 }
-            }
-    
-            &_button:first-child {
-                margin-left: 0px;
-            }
-    
-            &_button:last-child {
-                margin-right: 0px;
+
+                &_left {
+                    left: -8px;
+                }
+
+                &_right {
+                    right: -8px;
+                }
             }
     
             &_text {
                 max-width: 128px;
-                margin: 0 56px;
                 display: flex;
                 flex-direction: column;
+                position: absolute;
+                bottom: 56px;
+                left: 72px;
+
                 >div {
                     font-family: Roboto Condensed;
                     font-size: 14px;

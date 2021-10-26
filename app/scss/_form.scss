@@ -8,8 +8,8 @@
 
     &_image{
         display: flex;
-        justify-content: space-around;
-        margin: 32px 0px 15px 0px;
+        justify-content: space-between;
+        margin: 32px 64px 32px 32px;
 
     }
 
@@ -18,15 +18,31 @@
     }
 
     &_section{
+        >svg {
+            cursor: pointer;
+        }
+
         >p{
-        font-family: Roboto Condensed;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: white;
+            font-family: Roboto Condensed;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+            margin-top: 7px;
+            cursor: pointer;
+        }
+    }
+
+    &_section_current {
+        >svg {
+            fill: $red;
+        }
+
+        >p {
+            color: $red;
         }
     }
 
@@ -176,6 +192,7 @@
             width: 92%;
             border: none;
             background-color: $grey-light;
+            display: initial;
         }
     }
 

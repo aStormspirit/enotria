@@ -10,7 +10,7 @@ const uglify = require('gulp-uglify-es').default;
 
 
 gulp.task('clean', async function(){
-    del.sync('dist')
+    del.sync('docs')
   })
 
 gulp.task('scss', function(){
@@ -22,7 +22,7 @@ gulp.task('scss', function(){
       }))
     .pipe(rename({suffix: '.min'}))
     .pipe( sourcemaps.write("./") )
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.reload({stream: true}))
 })
 
@@ -32,7 +32,7 @@ gulp.task('js', function(){
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('docs/js'))
     .pipe(browserSync.reload({stream: true}))
 });
 
@@ -42,14 +42,14 @@ gulp.task('css', function(){
       'node_modules/slick-carousel/slick/slick.css'
     ])
       .pipe(concat('_libs.scss'))
-      .pipe(gulp.dest('app/scss'))
+      .pipe(gulp.dest('docs/scss'))
       .pipe(browserSync.reload({stream: true}))
   });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "app/"
+            baseDir: "docs/"
         }
     });
   });
@@ -66,19 +66,19 @@ gulp.task('browser-sync', function() {
 
   gulp.task('export', function(){
     let buildHtml = gulp.src('app/**/*.html')
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('docs'));
   
     let BuildCss = gulp.src('app/css/**/*.css')
-      .pipe(gulp.dest('dist/css'));
+      .pipe(gulp.dest('docs/css'));
   
     let BuildJs = gulp.src('app/js/**/*.js')
-      .pipe(gulp.dest('dist/js'));
+      .pipe(gulp.dest('docs/js'));
       
     let BuildFonts = gulp.src('app/fonts/**/*.*')
-      .pipe(gulp.dest('dist/fonts'));
+      .pipe(gulp.dest('docs/fonts'));
   
     let BuildImg = gulp.src('app/svg/**/*.*')
-      .pipe(gulp.dest('dist/img'));   
+      .pipe(gulp.dest('docs/svg'));   
   });
 
   gulp.task('watch', function(){

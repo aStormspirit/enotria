@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
@@ -12,17 +13,99 @@
         <nav class="navigation">
             <div class="navbar">
             <div class="navbar__city">
-                <div class="navbar__city_text">Москва</div>
+                <div class="navbar__city_text">
+                    <p>Москва</p>
+                </div>
                 <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
             </div>
             <div class='navbar__button'>
-                <button class="navbar__button button"><p>Оформить заявку</p></button>
+                <button class="button-nav"><p>Оформить заявку</p></button>
             </div>
             <div class="navbar__icon">
                 <div class="navbar__icon_login"><img  class='login' src="svg/icon.svg" alt="icon"></div>
                 <div class="navbar__icon_elem1"></div>
                 <div class="navbar__icon_elem2"></div>
             </div>
+            </div>
+<!-- Форма регистрации -->
+            <div class="navbar__form visible">
+                <div class="navbar__form_image">
+                <div class="navbar__form_section navbar__form_section_current" data-field="navbar__form_login">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="#CED6D9" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.8953 36.1583C28.7419 32.0723 18.8814 31.9044 10.5322 35.7758C7.70556 32.6134 5.97974 28.4527 5.97974 23.8817C5.97974 14.0025 14.0118 5.97041 23.891 5.97041C33.7701 5.97041 41.8022 14.0025 41.8022 23.8817C41.7929 28.63 39.9178 32.9492 36.8953 36.1583Z" />
+                        <path d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
+                    </svg>
+                    <p>Авторизация</p>
+                </div>
+                <div class="navbar__form_section" data-field="navbar__form_register">
+                    <svg width="66" height="48" viewBox="0 0 66 48" fill="#CED6D9" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.886 36.1583C28.7326 32.0723 18.8721 31.9044 10.5229 35.7758C7.69623 32.6134 5.97041 28.4527 5.97041 23.8817C5.97041 14.0025 14.0025 5.97041 23.8817 5.97041C33.7608 5.97041 41.7929 14.0025 41.7929 23.8817C41.7929 28.63 39.9178 32.9492 36.886 36.1583Z" />
+                        <path d="M56.8101 0.00933838C51.8401 0.00933838 47.8101 4.05015 47.8101 9.00933C47.8101 13.9685 51.8509 18.0093 56.8101 18.0093C61.7692 18.0093 65.8101 13.9685 65.8101 9.00933C65.8101 4.05015 61.7692 0.00933838 56.8101 0.00933838ZM61.3047 10.1438H57.9229V13.5255H55.6756V10.1438H52.2938V7.89649H55.6756V4.51474H57.9229V7.89649H61.3047V10.1438Z" />
+                        <path d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
+                    </svg>
+                    <p>Регистрация</p>
+                </div>
+                </div>
+
+                <div class="navbar__form_login navbar__form_field">
+                    <div class="navbar__form_elem">
+                        <p>E-mail или телефон</p>
+                        <form action="">
+                            <input type="text" class="email" name="login">
+                        </form>
+                    </div>
+                    <div class="navbar__form_elem">
+                        <p>Пароль</p>
+                        <form action="">
+                            <input type="password" name="password">
+                        </form>
+                    </div>
+                    <div class="navbar__form_link">
+                        <a href="#">Забыл пароль</a>
+                    </div>
+                    <div class="navbar__form_button">
+                        <button class="button">Войти</button>
+                    </div>
+                </div>
+                <div class="navbar__form_register navbar__form_field">
+                    
+                    <div class="navbar__form_elem">
+                        <p>Имя*</p>
+                        <form action="">
+                            <input type="text" class="name" name="name">
+                        </form>
+                    </div>
+                    <div class="navbar__form_elem">
+                        <p>Фамилия*</p>
+                        <form action="">
+                            <input type="text" class="name" name="surname">
+                        </form>
+                    </div>
+                    <div class="navbar__form_elem">
+                        <p>Отчество*</p>
+                        <form action="">
+                            <input type="text" class="name" name="patronymic">
+                        </form>
+                    </div>
+                    <div class="navbar__form_elem">
+                        <p>Email*</p>
+                        <form action="">
+                            <input type="email" class="email" name="email">
+                        </form>
+                    </div>
+                    <div class="navbar__form_elem">
+                        <p>Телефон</p>
+                        <form action="">
+                            <input type="tel" name="phone">
+                        </form>
+                    </div>
+                    <div class="navbar__form_button">
+                        <button class="button">Зарегестрироваться</button>
+                    </div>
+                </div>
+                <div class="navbar__form_footer">
+
+                </div>
             </div>
         </nav>
         <div>
@@ -34,11 +117,25 @@
             </div>
             <div class="hide-for-desktop">
             <div class="main-panel__menu">
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner "></span>
-                    </span>
-                  </button>
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>About</li></a>
+                      <a href="#"><li>Info</li></a>
+                      <a href="#"><li>Contact</li></a>
+                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                    </ul>
+                  </div>
             </div>
             </div>
             <div class="main-panel__link hide-for-mobile">
@@ -56,364 +153,127 @@
                     <button type="submit"><img src="svg/loop.svg"></button>
                   </form>
             </div>
+            <div class="main-panel__info hide-for-desktop">
+            <div class="main-panel__info_block">
+                <div class="main-panel__info_logo">
+                <img src="svg/logo.svg" alt="logo">
+                </div>
+                <div class="main-panel__info_search">
+                <form class="form">
+                    <div class="input__handler">
+                    <input class="search" type="text" placeholder="Я ищу">
+                    </div>
+                    <div class="button__handler">
+                    <button class="button" type="submit"><img src="svg/loop.svg"></button>
+                    </div>
+                </form>
+                </div>
+                <div class="main-panel__info_link">
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+                </div>
+            </div>
+        </div>
         </div>
     </header>
     <main>
-        <!-- главное меню -->
-        <div class="body">
-            <div class="body__image">
-                <div class="body__image_image">
-                <div class="body__image_block">
-                    <div class="body__image_text228">
-                        <div class="body__image_text1">
-                        <p>Константин
-                        Константинович
-                        Константинопольский</p>
-                        </div>
-                        <div class="body__image_text2">
-                        <p>Студент</p>
-                    </div>
-                    </div>
-                <img src="svg/cabinet.svg" alt="">
-            </div>
-                <div class="body__image_background"></div>
-            </div>
-            </div>
-        </div>
-        <div class="body__menu">
-            <div class="body__menu_block"><p>Профиль</p><div></div></div>
-            <div class="body__menu_block"><p>мои курсы</p><div></div></div>
-            <div class="body__menu_block"><p>доступные материалы</p><div></div><div class="plus">+28</div></div>
-        </div>
-        <!-- Конец главного меню -->
-        <div class="wrapper">
-            <div class="body__study">
-                <div class="body__study_card">
-                    <div class="card__info">
-                        <div>
-                            <p>
-                                С 6 сентября
-                                по 24 декабря
-                                2021 года
-                            </p>
-                        </div>
-                        <div class="card__info_row">
-                            <div>
-                                <p>250 000₽</p>
-                            </div>
-                        </div>
-                        <div class="button__card">
-                            <button>приобретен</button>
-                        </div>
-                    </div>
-                    <div class="card__background">
-                        <div class="card__background_info"><p>Прохожу обучение</p></div>
-                    </div>
-                </div>
-            </div>
-    <!-- блок основной информацие о курсе 1-->
-            <div class="body__title">
-                <p>№1 Основной курс профессионального обучения</p>
-                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                <div class="button">
-                    <button>Открыть курс</button>
-                    <button>Доступные материалы</button>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="body__study">
-                <div class="body__study_card">
-                    <div class="border"></div>
-                    <div class="card__info red">
-                        <div>
-                            <p>
-                                С 24 мая
-                                по 6 августа
-                                2021 года
-                            </p>
-                        </div>
-                        <div class="card__info_row">
-                            <div>
-                                <p>2 850 000₽</p>
-                            </div>
-                        </div>
-                        <div class="button__card">
-                            <button>приобретен</button>
-                        </div>
-                    </div>
-                    <div class="card__background">
-                        <div class="card__background_info"><p>Прохожу обучение</p></div>
-                    </div>
-                </div>
-            </div>
-    <!-- блок основной информацие о курсе 3 -->
-            <div class="body__title">
-                <p>№3 Специальный, летний, интенсивный курс для профессионалов и любителей</p>
-                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                <div class="button">
-                    <button>Открыть курс</button>
-                    <button>Доступные материалы</button>
-                </div>
-            </div>
-        </div> 
-                <div class="wrapper">
-            <div class="body__study">
-                <div class="body__study_card">
-                    <div class="card__info">
-                        <div>
-                        <p>С 6 сентября
-                            по 24 декабря
-                            2021 года</p>
-                        </div>
-                        <div class="card__info_row">
-                            <div><p>50 000₽</p></div>
-                        </div>
-                        <div class="button__card">
-                            <button>приобретен</button>
-                        </div>
-                    </div>
-                    <div class="card__background">
-                        <div class="card__background_info good"><p>Ура! Курс пройден</p></div>
-                    </div>
-                </div>
-            </div>
-    <!-- блок основной информацие о курсе 2 -->
-            <div class="body__title">
-                <p>№2 Универсальный, вечерний, интенсивный курс для профессионалов и любителей</p>
-                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                <div class="button">
-                    <button>Открыть курс</button>
-                    <button>Доступные материалы</button>
-                </div>
-            </div>
-        </div>   
-        <div class="wrapper">
-            <div class="body__study">
-                <div class="body__study_card">
-                    <div class="card__info">
-                        <div>
-                        <p>С 24 мая
-                            по 6 августа
-                            2021 года</p>
-                        </div>
-                        <div class="card__info_row">
-                            <div><p>2 850 000₽</p></div>
-                        </div>
-                        <div class="button__card">
-                            <button>приобретен</button>
-                        </div>
-                    </div>
-                    <div class="card__background">
-                        <div class="card__background_info good"><p>Ура! Курс пройден</p></div>
-                    </div>
-                </div>
-            </div>
-    <!-- блок основной информацие о курсе 4-->
-            <div class="body__title">
-                <p>№4 Вечерний курс обучения для любителей</p>
-                <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                <div class="button">
-                    <button>Открыть курс</button>
-                    <button>Доступные материалы</button>
-                </div>
-            </div>
-        </div>
-        <div class="body__form2">
-            <div class="body__form">
-                <p class="text">Записаться в очередь</p>
-                <div class="body__form_area">
-                    <p>Имя*</p>
-                    <form action="">
-                        <input type="text">
-                        <img src="svg/false.svg" alt="">
-                    </form>
-                    <div class="body__form_alert">
-                        <div></div>
-                        <p>Извините, но это поле обязательно к заполнению</p>
-                    </div>
-                </div>
-                <div class="body__form_area">
-                    <p>Фамилия*</p>
-                    <form action="">
-                        <input type="text">
-                        <img src="svg/true.svg" alt="">
-                    </form>
-                </div>
-                <div class="body__form_area">
-                    <p>Отчество*</p>
-                    <form action="">
-                        <input type="text">
-                        <img src="svg/false.svg" alt="">
-                    </form>
-                    <div class="body__form_alert">
-                        <div></div>
-                        <p>Пожалуйста, введите корректное отчество</p>
-                    </div>
-                </div>
-                <div class="body__form_area">
-                    <p>Email*</p>
-                    <form action="">
-                        <input type="text">
-                        <img src="svg/true.svg" alt="">
-                    </form>
-                </div>
-                <div class="body__form_area">
-                    <p>Телефон*</p>
-                    <form action="">
-                        <input type="text">
-                        <img src="svg/false.svg" alt="">
-                    </form>
-                    <div class="body__form_alert">
-                        <div></div>
-                        <p>Пожалуйста, введите корректный номер телефона</p>
-                    </div>
-                </div>
-                <div class="body__form_button">
-                    <button>
-                        Применить изменения
-                    </button>
-                </div>
-            </div>
-            <div class="body__form_footer">
-            </div>
-            </div>
-            <div class="wrapper">
-                <div class="body__study">
-                    <div class="body__study_card">
-                        <div class="card__info">
-                            <div>
-                                <p>
-                                    С 6 сентября
-                                    по 24 декабря
-                                    2021 года
-                                </p>
-                            </div>
-                            <div class="card__info_row">
+<!-- main block -->
+        <div class="main">
+            <div class="main__image">
+                <div class="main__info main__info_swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
                                 <div>
-                                    <p>250 000₽</p>
+                                    новый курс
                                 </div>
-                            </div>
-                            <div class="button__card">
-                                <button>приобретен</button>
+                                <button>купить</button>
                             </div>
                         </div>
-                        <div class="card__background">
-                            <div class="new"><p>Новый</p></div>
-                            <div class="card__background_info place"><div><p>свободных мест</p></div><div><p>25</p><p>/56</p></div></div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
                         </div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="main__info_image" src="../svg/main-img-pc.jpg">
+                            <div class="main__info_text">
+                                <p>Крепкие спиртные напитки</p>
+                                <div>
+                                    новый курс
+                                </div>
+                                <button>купить</button>
+                            </div>
+                        </div>
+                      </div>
+                    <div class="main__info_slides hide-for-mobile">
                     </div>
-                </div>
-        <!-- блок основной информацие о курсе 1-->
-                <div class="body__title">
-                    <p>№1 Основной курс профессионального обучения</p>
-                    <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                    <div class="button">
-                        <button>Открыть курс</button>
-                        <button>Доступные материалы</button>
+
+                    <div class="main__info_button main__info_button_left">
+                        <img src="svg/left.svg" alt="">
+                    </div>
+                    <div class="main__info_button main__info_button_right">
+                        <img src="svg/right.svg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="wrapper">
-                <div class="body__study">
-                    <div class="body__study_card">
-                        <div class="border"></div>
-                        <div class="card__info">
-                            <div>
-                                <p>
-                                    С 24 мая
-                                    по 6 августа
-                                    2021 года
-                                </p>
-                            </div>
-                            <div class="card__info_row">
-                                <div>
-                                    <p>2 850 000₽</p>
-                                </div>
-                            </div>
-                            <div class="button__card">
-                                <button class="red">набор закрыт</button>
-                            </div>
-                        </div>
-                        <div class="card__background">
-                            <div class="card__background_info place" id="red"><div><p>свободных мест</p></div><div><p>0</p><p>/56</p></div></div>
-                            <div class="list"><p>Лист ожидания</p></div>
-                        </div>
-                    </div>
-                </div>
-        <!-- блок основной информацие о курсе 3 -->
-                <div class="body__title">
-                    <p>№3 Специальный, летний, интенсивный курс для профессионалов и любителей</p>
-                    <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                    <div class="button">
-                        <button>Открыть курс</button>
-                        <button>Доступные материалы</button>
-                    </div>
-                </div>
-            </div> 
-                    <div class="wrapper">
-                <div class="body__study">
-                    <div class="body__study_card">
-                        <div class="card__info">
-                            <div>
-                            <p>С 6 сентября
-                                по 24 декабря
-                                2021 года</p>
-                            </div>
-                            <div class="card__info_row">
-                                <div><p>50 000₽</p></div>
-                            </div>
-                            <div class="button__card">
-                                <button>приобретен</button>
-                            </div>
-                        </div>
-                        <div class="card__background">
-                            <div class="new"><p>Новый</p></div>
-                            <div class="card__background_info place"><div><p>свободных мест</p></div><div><p>56</p><p>/56</p></div></div>
-                        </div>
-                    </div>
-                </div>
-        <!-- блок основной информацие о курсе 2 -->
-                <div class="body__title">
-                    <p>№2 Универсальный, вечерний, интенсивный курс для профессионалов и любителей</p>
-                    <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                    <div class="button">
-                        <button>Открыть курс</button>
-                        <button>Доступные материалы</button>
-                    </div>
-                </div>
-            </div>   
-            <div class="wrapper">
-                <div class="body__study">
-                    <div class="body__study_card">
-                        <div class="card__info">
-                            <div>
-                            <p>С 24 мая
-                                по 6 августа
-                                2021 года</p>
-                            </div>
-                            <div class="card__info_row">
-                                <div><p>2 850 000₽</p></div>
-                            </div>
-                            <div class="button__card">
-                                <button>приобретен</button>
-                            </div>
-                        </div>
-                        <div class="card__background">
-                            <div class="card__background_info place"><div><p>свободных мест</p></div><div><p>56</p><p>/56</p></div></div>
-                        </div>
-                    </div>
-                </div>
-        <!-- блок основной информацие о курсе 4-->
-                <div class="body__title">
-                    <p>№4 Вечерний курс обучения для любителей</p>
-                    <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
-                    <div class="button">
-                        <button>Открыть курс</button>
-                        <button>Доступные материалы</button>
-                    </div>
-                </div>
-            </div>        
+            <div class="main__image_text">
+            </div>
+        </div>
+<!-- main block -->
     </main>
     <footer>
         <div class="footer">
@@ -441,15 +301,13 @@
             <div class="footer__content footer__content_moscow">
                 <div>
                 <p class="title">Адрес в Москве</p>
-                <p>123007, 4-я</p>
-                <p>Магистральная ул.,</p>
+                <p>123007, 4-я Магистральная ул.,</p>
                 <p>д. 11, стр. 2, этаж 2</p>
                 </div>
                 <div>
                 <p class="title">Телефоны:</p>
-                <p>+7 495 510-52-74
-                добавочный 6317,</p>
-                <p>6302, 6305</p>
+                <p>+7 495 510-52-74 </p>
+                    <p>добавочный 6317, 6302, 6305</p>
                 </div>
                 <div>
                 <p class="title">E-mail:</p>
@@ -458,8 +316,8 @@
             </div>
             <div class="footer__content footer__content_saintp">
                 <div>
-                <p class="title">Адрес в Санкт-Петербурге</p>
-                <p>пр. Добролюбова, 16А</p>
+                <p class="title">Адрес в <span class="hide-for-mobile">Санкт-Петербурге</span> <span class="hide-for-desktop">СПб</span></p>
+                <p>пр. Добролюбова,<br class="hide-for-desktop"> 16А</p>
                 </div>
                 <div>
                 <p class="title">Телефоны:</p>
@@ -478,4 +336,9 @@
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/libs.min.js"></script>
 </html>

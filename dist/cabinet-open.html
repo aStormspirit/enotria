@@ -16,7 +16,7 @@
                 <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
             </div>
             <div class='navbar__button'>
-                <button class="navbar__button button"><p>Оформить заявку</p></button>
+                <button class="button-nav"><p>Оформить заявку</p></button>
             </div>
             <div class="navbar__icon">
                 <div class="navbar__icon_login"><img  class='login' src="svg/icon.svg" alt="icon"></div>
@@ -34,11 +34,35 @@
             </div>
             <div class="hide-for-desktop">
             <div class="main-panel__menu">
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner "></span>
-                    </span>
-                  </button>
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    
+                    <!--
+                    Some spans to act as a hamburger.
+                    
+                    They are acting like a real hamburger,
+                    not that McDonalds stuff.
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <!--
+                    Too bad the menu has to be inside of the button
+                    but hey, it's pure CSS magic.
+                    -->
+                    <ul id="menu">
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>About</li></a>
+                      <a href="#"><li>Info</li></a>
+                      <a href="#"><li>Contact</li></a>
+                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                    </ul>
+                  </div>
             </div>
             </div>
             <div class="main-panel__link hide-for-mobile">
@@ -83,7 +107,7 @@
         <div class="body__menu">
             <div class="body__menu_block"><p>Профиль</p><div></div></div>
             <div class="body__menu_block"><p>мои курсы</p><div></div></div>
-            <div class="body__menu_block"><p>доступные материалы</p><div></div><div class="plus">+28</div></div>
+            <div class="body__menu_block body__menu_block_current"><p>доступные материалы</p><div></div><div class="plus">+28</div></div>
         </div>
         <!-- Конец главного меню -->
         <div class="wrapper">
@@ -257,7 +281,7 @@
             </div>
             <div class="footer__content footer__content_saintp">
                 <div>
-                <p class="title">Адрес в Санкт-Петербурге</p>
+                <p class="title">Адрес в <span class="hide-for-mobile">Санкт-Петербурге</span> <span class="hide-for-desktop">СПб</span></p>
                 <p>пр. Добролюбова, 16А</p>
                 </div>
                 <div>

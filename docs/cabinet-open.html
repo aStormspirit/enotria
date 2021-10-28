@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="navbar">
+            <div class="navbar__city">
+                <div class="navbar__city_text">Москва</div>
+                <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
+            </div>
+            <div class='navbar__button'>
+                <button class="button-nav"><p>Оформить заявку</p></button>
+            </div>
+            <div class="navbar__icon">
+                <div class="navbar__icon_login"><img  class='login' src="svg/icon.svg" alt="icon"></div>
+                <div class="navbar__icon_elem1"></div>
+                <div class="navbar__icon_elem2"></div>
+            </div>
+            </div>
+        </nav>
+        <div>
+
+        </div>
+        <div class="main-panel">
+            <div class="main-panel__logo">
+                <img src="svg/logo.svg" alt="logo">
+            </div>
+            <div class="hide-for-desktop">
+            <div class="main-panel__menu">
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    
+                    <!--
+                    Some spans to act as a hamburger.
+                    
+                    They are acting like a real hamburger,
+                    not that McDonalds stuff.
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <!--
+                    Too bad the menu has to be inside of the button
+                    but hey, it's pure CSS magic.
+                    -->
+                    <ul id="menu">
+                      <a href="#"><li>Home</li></a>
+                      <a href="#"><li>About</li></a>
+                      <a href="#"><li>Info</li></a>
+                      <a href="#"><li>Contact</li></a>
+                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                    </ul>
+                  </div>
+            </div>
+            </div>
+            <div class="main-panel__link hide-for-mobile">
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="main-panel__search hide-for-mobile">
+                <form>
+                    <input type="text" placeholder="Я ищу">
+                    <button type="submit"><img src="svg/loop.svg"></button>
+                  </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- главное меню -->
+        <div class="body">
+            <div class="body__image">
+                <div class="body__image_image">
+                <div class="body__image_block">
+                    <div class="body__image_text228">
+                        <div class="body__image_text1">
+                        <p>Константин
+                        Константинович
+                        Константинопольский</p>
+                        </div>
+                        <div class="body__image_text2">
+                        <p>Студент</p>
+                    </div>
+                    </div>
+                <img src="svg/cabinet.svg" alt="">
+            </div>
+                <div class="body__image_background"></div>
+            </div>
+            </div>
+        </div>
+        <div class="body__menu">
+            <div class="body__menu_block"><p>Профиль</p><div></div></div>
+            <div class="body__menu_block"><p>мои курсы</p><div></div></div>
+            <div class="body__menu_block body__menu_block_current"><p>доступные материалы</p><div></div><div class="plus">+28</div></div>
+        </div>
+        <!-- Конец главного меню -->
+        <div class="wrapper">
+        <div class="body__study">
+            <div class="body__study_card">
+                <div class="card__info">
+                    <div>
+                    <p>Доступно</p>
+                    <p>материалов</p>
+                    </div>
+                    <div class="card__info_row">
+                        <div><p>25</p></div>
+                        <div class="row">
+                        <div>
+                            <p>+2</p>
+                        </div>
+                        <div>
+                            <p>новых</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card__background">
+                </div>
+            </div>
+        </div>
+<!-- блок основной информацие о курсе -->
+        <div class="body__title">
+            <p>№1 Основной курс профессионального обучения</p>
+            <p>Лицензированный курс профессиональной подготовки для специалистов (сомелье, кавист, менеджер виноторговой компании), а также, для ценителей культуры вина.</p>
+            <div class="button">
+                <button>Прохожу обучение</button>
+            </div>
+        </div>
+    </div>
+<!-- карточки курсов -->
+<div class="body__material">
+    <div class="new">новый</div>
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="new">новый</div>
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+<div class="body__material">
+    <div class="hide-for-mobile">
+        <img src="svg/doc.svg" alt="">
+    </div>
+    <div class="body__material_img hide-for-desktop">
+        <img src="svg/doc.svg" alt="">
+        <img src="svg/download.svg" alt="">
+    </div>
+    <p>Встреча новых студентов. Что есть Вино. Факторы, определяющие качество вина. Вино и климат. Терруар. Искусство винодела. Авторство в вине.</p>
+<div class="hide-for-mobile">
+    <img src="svg/download.svg" alt="">
+</div>
+</div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__grid">
+            <div class="footer__content hide-for-mobile">
+                <p>Школа вина</p>
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="footer__content hide-for-mobile">
+                <p>О школе</p>
+                <a href="#">О школе</a>
+                <a href="#">Преподователи</a>
+                <a href="#">Студенты</a>
+                <a href="#">Расписание</a>
+                <a href="#">Программы</a>
+                <a href="#">Галерея</a>
+                <a href="#">Региональная Политика</a>
+            </div>
+            <div class="footer__content footer__content_moscow">
+                <div>
+                <p class="title">Адрес в Москве</p>
+                <p>123007, 4-я</p>
+                <p>Магистральная ул.,</p>
+                <p>д. 11, стр. 2, этаж 2</p>
+                </div>
+                <div>
+                <p class="title">Телефоны:</p>
+                <p>+7 495 510-52-74
+                добавочный 6317,</p>
+                <p>6302, 6305</p>
+                </div>
+                <div>
+                <p class="title">E-mail:</p>
+                <p>msk@enotria.ru</p>
+            </div>
+            </div>
+            <div class="footer__content footer__content_saintp">
+                <div>
+                <p class="title">Адрес в <span class="hide-for-mobile">Санкт-Петербурге</span> <span class="hide-for-desktop">СПб</span></p>
+                <p>пр. Добролюбова, 16А</p>
+                </div>
+                <div>
+                <p class="title">Телефоны:</p>
+                <p>+7 812 363 25 16</p>
+                <p>+7 812 363 11 00</p>
+                </div>
+                <div>
+                <p class="title">E-mail:</p>
+                <p>spb@enotria.ru</p>
+            </div>
+            </div>
+            </div>
+            <div class="footer__copyright">
+                <p>© 2021 Simple</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

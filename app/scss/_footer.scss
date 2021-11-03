@@ -37,7 +37,7 @@ footer{
             &__grid{
                 padding: 15px 16px 0;
                 display: grid;
-                grid-template-columns: 128px 128px;
+                grid-template-columns: 1fr 1fr;
                 column-gap: 16px;
             }
 

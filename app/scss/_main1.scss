@@ -12,7 +12,7 @@
         position: relative;
 
         &__image {
-            min-height: 768px;
+            min-height: 784px;
             background-position: center;
             width: 1120px;
             margin: 0 auto;
@@ -170,7 +170,171 @@
     }
 }
 
-@include media("<desktop"){
+@include media("<desktop", ">tablet") {
+    .main {
+        position: relative;
+        margin: 0 32px;
+
+        &__image {
+            min-height: 434px;
+            background-position: center;
+            width: 620px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__image_text {
+            height: 254px;
+            min-height: 170px;
+            background-color: $red;
+            position: absolute;
+            top: 128px;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+    
+        &__info {
+            width: 100%;
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            overflow: hidden;
+
+            .swiper-wrapper {
+                z-index: 0;
+            }
+
+            .swiper-slide {
+                position: relative;
+            }
+
+            &_image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            &_button {
+                height: 32px;
+                width: 32px;
+                margin-bottom: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                position: absolute;
+                top: 280px;
+                cursor: pointer;
+
+                >img{
+                    width: 8.49px;
+                    height: 14.14px;
+                }
+
+                &_left {
+                    left: -24px;
+                }
+
+                &_right {
+                    right: -24px;
+                }
+            }
+    
+            &_text {
+                max-width: 200px;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 48px;
+                left: 296px;
+
+                >div {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: $white;
+                    align-items: center;
+                }
+                >p:first-child {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 40px;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin-bottom: 34px;
+                }
+                >p {
+                    color: $white;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0.2em;
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+                >button {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: $white;
+                    width: 160px;
+                    height: 40px;
+                    margin-top: 20px;
+                    background-color: $red;
+                    border: none;
+                }
+            }
+
+            &_slides.swiper-pagination-bullets.swiper-pagination-horizontal {
+                width: max-content;
+                min-height: 348px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 98px;
+                bottom: auto;
+                right: 50px;
+                left: auto;
+
+                .swiper-pagination-bullet {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 36px;
+                    color: $white;
+                    margin: 0;
+                    display: inline;
+                    width: max-content;
+                    height: auto;
+                    background: none;
+                    opacity: 1;
+
+                    &-active {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media("<tablet"){
     .main{
         height: 368px;
         margin: 0 8px;

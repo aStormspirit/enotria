@@ -148,7 +148,404 @@
 
 }
 
-@include media("<desktop"){
+@include media(">desktop"){
+
+    .wrapper {
+        max-width: 1120px;
+        margin: 16px auto 0;
+        position: relative;
+    }
+
+    .wrapper:nth-child(3) {
+        margin: 0 auto;
+    }
+
+
+    .body__study_card{
+        width: 544px;
+        grid-template-columns: 160px 1fr;
+
+        .border{
+            border: 2px solid $red;
+            position: absolute;
+            top: -16px;
+            bottom: -16px;
+            left: -16px;
+            right: 50%;
+            z-index: -1;
+        }
+    }
+
+    .card__info{
+        padding: 14px 10px;
+
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    .card__info_row{
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+
+    .row{
+        >div:first-child{
+            height: 30px;
+        }
+    }
+
+    .body__title{
+        margin-top: 40px !important;
+        display: grid;
+        grid-template-rows: min-content 1fr auto;
+
+        >p:nth-child(2) {
+            margin-top: 15px;
+        }
+    }
+
+    .button{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        >button {
+            width: 256px;
+            flex-grow: 0;
+        }
+    }
+
+    .card__background {
+        position: relative;
+
+        .new {
+            width: 80px;
+            height: 32px;
+            background-color: $red;
+            position: absolute;
+            top: -16px;
+            left: 16px;
+
+
+            >p {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 32px;
+                color: $white;
+                text-align: center;
+            }
+        }
+    }
+
+    .card__background_info{
+        background-color: $red;
+        position: absolute;
+        padding: 2px;
+        width: 96px;
+        height: 104px;
+        right: 16px;
+        top: -16px;
+    }
+
+    .card__background_info.place{
+        width: 96px;
+        height: 104px;
+        padding: 12px 16px 0;
+        background-color: #1CC05E;
+        position: absolute;
+        right: 16px;
+        top: -16px;
+        flex-direction: column;
+
+        p {
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+            color: #FFFFFF;
+        }
+
+        >div:last-child {
+            display: flex;
+            justify-content: end;
+
+            >p:first-child {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 48px;
+                margin-top: 6px;
+            }
+
+            >p:last-child {
+                margin-top: 12px;
+            }
+        }
+
+    }
+
+    .card__info_course {
+        display: flex;
+        flex-direction: column;
+
+        .card__info_price {
+            >div {
+                width: 100%;
+                margin: 8px 7px 0 0 !important;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 24px;
+                text-align: right;
+                margin: 46px 0 0 0;
+            }
+        }
+
+        .button__card {
+            width: 128px;
+            height: 32px;
+            margin: 11px auto 0;
+
+            >button {
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@include media("<desktop", ">tablet"){
+
+    .wrapper {
+        max-width: 704px;
+        margin: 16px auto 0;
+        position: relative;
+    }
+
+    .wrapper:nth-child(3) {
+        margin: 0 auto;
+    }
+
+    .body__study {
+        display: flex;
+
+        .card__background {
+            position: relative;
+    
+            .new {
+                width: 64px;
+                height: 32px;
+                background-color: $red;
+                position: absolute;
+                top: -16px;
+                left: 10px;
+    
+    
+                >p {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: $white;
+                    text-align: center;
+                }
+            }
+    
+            .list {
+                height: 24px;
+                font-size: 14px;
+                line-height: 24px;
+                right: auto;
+                left: 10px;
+                bottom: 14px;
+            }
+    
+            &_info {
+                background-color: $red;
+                position: absolute;
+                padding: 2px;
+                right: 10px;
+                top: -16px;
+    
+                &.place {
+                    width: 80px;
+                    height: 86px;
+                    padding: 12px 16px 0;
+                    background-color: #1CC05E;
+                    position: absolute;
+                    right: 10px;
+                    top: -16px;
+                    flex-direction: column;
+            
+                    p {
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                    }
+            
+                    >div:last-child {
+                        display: flex;
+                        justify-content: end;
+            
+                        >p:first-child {
+                            font-weight: bold;
+                            font-size: 32px;
+                            line-height: 40px;
+                            margin-top: 6px;
+                        }
+            
+                        >p:last-child {
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .body__study_card{
+        width: 352px;
+        min-height: 154px;
+        grid-template-columns: 160px 1fr;
+
+        .border{
+            border: 2px solid $red;
+            position: absolute;
+            top: -16px;
+            bottom: -16px;
+            left: -16px;
+            right: 50%;
+            z-index: -1;
+        }
+    }
+
+    .card__info{
+        padding: 14px 10px;
+
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        .card__info_price {
+            margin-top: auto;
+        }
+    }
+
+    .card__info_row{
+        >div:first-child{
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+
+    .row{
+        >div:first-child{
+            height: 30px;
+        }
+    }
+
+    .body__title{
+        margin-top: 42px !important;
+        display: grid;
+        grid-template-rows: min-content 1fr auto;
+        grid-template-columns: 100%;
+
+        >p:nth-child(2) {
+            margin-top: 15px;
+        }
+    }
+
+    .button{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        >button {
+            width: 256px;
+            flex-grow: 0;
+        }
+    }
+
+    .card__info_course {
+        display: flex;
+        flex-direction: column;
+
+        .card__info_price {
+            >div {
+                width: 100%;
+                margin: 8px 7px 0 0 !important;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 24px;
+                text-align: right;
+                margin: 16px 0 0 0;
+            }
+        }
+
+        .button__card {
+            width: 128px;
+            height: 32px;
+            margin: 11px auto 0;
+
+            >button {
+                font-family: Roboto Condensed;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@include media("<tablet"){
     .wrapper {
         margin: 0 24px 56px;
     }
@@ -365,194 +762,4 @@
         }
     }
 
-}
-
-@include media(">desktop"){
-
-    .wrapper {
-        max-width: 1120px;
-        margin: 16px auto 0;
-    }
-
-    .wrapper:nth-child(3) {
-        margin: 0 auto;
-    }
-
-
-    .body__study_card{
-        width: 544px;
-        grid-template-columns: 160px 1fr;
-
-        .border{
-            border: 2px solid $red;
-            position: absolute;
-            top: -16px;
-            bottom: -16px;
-            left: -16px;
-            right: 50%;
-            z-index: -1;
-        }
-    }
-
-    .card__info{
-        padding: 14px 10px;
-
-        >div:first-child{
-            font-family: Roboto Condensed;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 24px;
-            letter-spacing: 0em;
-            text-align: left;
-        }
-    }
-
-    .card__info_row{
-        >div:first-child{
-            font-family: Roboto Condensed;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 48px;
-        }
-    }
-
-    .row{
-        >div:first-child{
-            height: 30px;
-        }
-    }
-
-    .body__title{
-        margin-top: 40px !important;
-        display: grid;
-        grid-template-rows: min-content 1fr auto;
-
-        >p:nth-child(2) {
-            margin-top: 15px;
-        }
-    }
-
-    .button{
-        font-family: Roboto Condensed;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-
-        >button {
-            width: 256px;
-            flex-grow: 0;
-        }
-    }
-
-    .card__background {
-        position: relative;
-
-        .new {
-            width: 80px;
-            height: 32px;
-            background-color: $red;
-            position: absolute;
-            top: -16px;
-            left: 16px;
-
-
-            >p {
-                font-family: Roboto;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 32px;
-                color: $white;
-                text-align: center;
-            }
-        }
-    }
-
-    .card__background_info{
-        background-color: $red;
-        position: absolute;
-        padding: 2px;
-        width: 96px;
-        height: 104px;
-        right: 16px;
-        top: -16px;
-    }
-
-    .card__background_info.place{
-        width: 96px;
-        height: 104px;
-        padding: 12px 16px 0;
-        background-color: #1CC05E;
-        position: absolute;
-        right: 16px;
-        top: -16px;
-        flex-direction: column;
-
-        p {
-            font-family: Roboto Condensed;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 16px;
-            color: #FFFFFF;
-        }
-
-        >div:last-child {
-            display: flex;
-            justify-content: end;
-
-            >p:first-child {
-                font-weight: bold;
-                font-size: 40px;
-                line-height: 48px;
-                margin-top: 6px;
-            }
-
-            >p:last-child {
-                margin-top: 12px;
-            }
-        }
-
-    }
-
-    .card__info_course {
-        display: flex;
-        flex-direction: column;
-
-        .card__info_price {
-            >div {
-                width: 100%;
-                margin: 8px 7px 0 0 !important;
-            }
-
-            p {
-                font-size: 24px;
-                line-height: 24px;
-                text-align: right;
-                margin: 46px 0 0 0;
-            }
-        }
-
-        .button__card {
-            width: 128px;
-            height: 32px;
-            margin: 11px auto 0;
-
-            >button {
-                font-family: Roboto Condensed;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;
-                height: 100%;
-            }
-        }
-    }
 }

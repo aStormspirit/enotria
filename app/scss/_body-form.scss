@@ -83,7 +83,86 @@
     
 }
 
-@include media("<desktop"){
+@include media(">desktop"){
+    .body__form{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 384px 384px;
+        column-gap: 100px;
+    }
+
+    .body__form_button{
+        width: 256px;
+        margin: 64px 0 88px 120px;
+    }
+
+    .body__form_area{
+        >form{
+            margin-top: 4px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+
+            >input{
+                background-color: $grey-light;
+            }
+
+            >input:hover{
+                    border: $red 2px solid;
+            }
+
+            >img {
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+            }
+        }
+    }
+
+
+}
+
+@include media("<desktop", ">tablet"){
+    .body__form{
+        margin: 57px 32px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 300px 300px;
+        column-gap: 50px;
+    }
+
+    .body__form_button{
+        width: 256px;
+        margin: 64px 0 88px 32px;
+    }
+
+    .body__form_area{
+        >form{
+            margin-top: 4px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+
+            >input{
+                background-color: $grey-light;
+            }
+
+            >input:hover{
+                    border: $red 2px solid;
+            }
+
+            >img {
+                width: 24px;
+                height: 24px;
+                margin-left: 8px;
+            }
+        }
+    }
+
+
+}
+
+@include media("<tablet"){
     .body__form {
         margin: 18px 24px 0;
         display: grid;
@@ -134,44 +213,5 @@
         }
         
     }
-
-}
-
-@include media(">desktop"){
-    .body__form{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 384px 384px;
-        column-gap: 100px;
-    }
-
-    .body__form_button{
-        width: 256px;
-        margin: 64px 0 88px 120px;
-    }
-
-    .body__form_area{
-        >form{
-            margin-top: 4px;
-            background-color: $white;
-            display: flex;
-            align-items: center;
-
-            >input{
-                background-color: $grey-light;
-            }
-
-            >input:hover{
-                    border: $red 2px solid;
-            }
-
-            >img {
-                width: 24px;
-                height: 24px;
-                margin-left: 8px;
-            }
-        }
-    }
-
 
 }

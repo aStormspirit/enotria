@@ -40,8 +40,44 @@
     }
 }
 
+@include media("<desktop", ">tablet"){
+    .body__title{
+        
+        >p:first-child{
+            font-size: 18px;
+            line-height: 26px;
+        }
+        >p:nth-child(2){
+            margin-top: 7px;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #303233;
+            margin-bottom: 10px;
+        }
+    
+        .button{
+            height: 32px;
+    
+            >button{
+                min-height: 32px;
+                padding: 0;
+                color: $white;
+                background-color: #303233;
+                border: none;
+                width: 156px;
+                font-size: 14px;
+            }
+        }
+    }
+    
+}
 
-@include media("<desktop"){
+@include media("<tablet"){
     .body__title{
         margin: 16px 0 0;
         grid-template-rows: min-content auto;

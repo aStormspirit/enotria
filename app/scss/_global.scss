@@ -35,12 +35,12 @@ html {
 
   @include media('<=desktop'){
     .hide-for-mobile{
-      display: none;
+      display: none !important;
       >a{
-        display: none;
+        display: none !important;
       }
       >form{
-        display: none;
+        display: none !important;
       }
     }
   }
@@ -51,6 +51,6 @@ html {
     }
 
     .hide-for-desktop{
-      display: none;
+      display: none !important;
     }
   }

@@ -46,7 +46,106 @@
     }
 }
 
-@include media("<desktop"){
+@include media(">desktop"){
+    .body__menu_block{
+        >p{
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
+
+    .plus{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        letter-spacing: 0em;
+        text-align: center;
+        width: 32px;
+        background-color: $red;
+        position: absolute;
+        top: -16px;
+        right: 8px;
+
+    }
+}
+
+@include media("<desktop", ">tablet"){
+    .body__menu{
+        background-color: $grey-light;
+        height: 40px;
+        margin: 0 96px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+        &_block_current {
+            background-color: black;
+    
+            >p{
+                color: white;
+                font-family: Roboto;
+            }
+    
+            >div:not(.plus){
+                width: 16px;
+                height: 16px;
+                background-color: black;
+                position: absolute;
+                bottom: -8px;
+                transform: rotate(45deg);
+            }
+        }
+    
+        &_block{
+            width: 256px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            >p{
+                text-align: center;
+                font-family: Roboto Condensed;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+    
+            }
+    
+        }
+    }
+
+    .plus{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        letter-spacing: 0em;
+        text-align: center;
+        width: 32px;
+        background-color: $red;
+        position: absolute;
+        top: -16px;
+        right: 8px;
+
+    }
+}
+
+
+@include media("<tablet"){
     .body__menu{
         height: 32px;
         margin: 0 24px;
@@ -106,36 +205,5 @@
             right: 8px;
 
         }
-    }
-}
-
-@include media(">desktop"){
-    .body__menu_block{
-        >p{
-            font-family: Roboto Condensed;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0em;
-            text-align: center;
-        }
-    }
-
-    .plus{
-        font-family: Roboto Condensed;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 24px;
-        color: $white;
-        letter-spacing: 0em;
-        text-align: center;
-        width: 32px;
-        background-color: $red;
-        position: absolute;
-        top: -16px;
-        right: 8px;
-
     }
 }

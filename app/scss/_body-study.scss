@@ -1,4 +1,5 @@
 .body__study{
+    position: relative;
 
     .red{
         background-color: $red !important;
@@ -22,17 +23,6 @@
         margin-top: 48px;
         display: grid;
         grid-template-columns: 50% 50%;
-
-        .border{
-            position: absolute;
-            z-index: -1;
-            min-width: 50%;
-            border: 2px solid $red;
-            min-height: 110%;
-            top: -5%;
-            left: -2%;
-        }
-
     }
 
     .card__info{
@@ -120,6 +110,22 @@
             background-color: #1CC05E !important;
         }
 
+        .list {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 32px;
+            color: $white;
+            width: max-content;
+            height: 32px;
+            padding: 0 8px;
+            background: #9B0034;
+            position: absolute;
+            left: 24px;
+            bottom: 16px;
+        }
+
         &_info{
             width: 96px;
             height: 48px;
@@ -144,7 +150,7 @@
 
 @include media("<desktop"){
     .wrapper {
-        margin: 0 24px;
+        margin: 0 24px 56px;
     }
 
     .body__study{
@@ -154,6 +160,17 @@
             margin-top: 40px;
             grid-template-columns: 128px 1fr;
     
+            .border{
+                width: 144px;
+                position: absolute;
+                z-index: -1;
+                border: 2px solid $red;
+                min-height: 110%;
+                top: -8px;
+                bottom: -8px;
+                left: -8px;
+                right: auto;
+            }
         }
         
         .card__info{
@@ -224,14 +241,72 @@
             .good{
                 background-color: #1CC05E !important;
             }
+
+            .new {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 32px;
+                text-align: center;
+                color: #FFFFFF;
+                width: 48px;
+                height: 32px;
+                background: #9B0034;
+                position: absolute;
+                top: -16px;
+                left: 8px;
+            }
         
             &_info{
-                width: 96px;
-                height: 48px;
+                width: 120px;
+                height: 32px;
                 display: flex;
                 align-items: center;
                 background-color: $red;
                 justify-content: center;
+                position: absolute;
+                top: -16px;
+                right: 8px;
+
+                &.place {
+                    width: 72px;
+                    height: 72px;
+                    padding: 4px 0 0 8px;
+                    background-color: #1CC05E;
+                    position: absolute;
+                    right: 8px;
+                    top: -16px;
+                    flex-direction: column;
+
+                    p {
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                    }
+
+                    >div:last-child {
+                        display: flex;
+                        justify-content: end;
+                        margin-top: -10px;
+
+                        >p:first-child {
+                            font-weight: bold;
+                            font-size: 24px;
+                            line-height: 48px;
+                            margin-top: 6px;
+                        }
+
+                        >p:last-child {
+                            margin-top: 12px;
+                        }
+                    }
+
+                }
+
                 >p{
                     font-family: Roboto Condensed;
                     font-size: 14px;
@@ -243,9 +318,53 @@
                     color: white;
                 }
             }
+
+            .list {
+                height: 24px;
+                font-size: 14px;
+                line-height: 24px;
+                right: 8px;
+                left: auto;
+                bottom: 8px;
+            }
         }
     
+        
+        .card__info_course {
+            display: flex;
+            flex-direction: column;
+
+            .card__info_price {
+                >div {
+                    width: 100%;
+                    margin: 8px 7px 0 0 !important;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: right;
+                    margin: 11px 0 0 0;
+                }
+            }
+
+            .button__card {
+                width: 112px;
+                height: 24px;
+                margin: 2px auto 0;
+
+                >button {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    height: 100%;
+                }
+            }
+        }
     }
+
 }
 
 @include media(">desktop"){

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,53 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav class="navigation">
             <div class="navbar">
-            <div class="navbar__city">
-                <div class="navbar__city_text">
-                    <p>Москва</p>
+                <div class="navbar__city">
+                    <div class="navbar__city_text">
+                        <p>Москва</p>
+                    </div>
+                    <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
                 </div>
-                <div class="navbar__city_item"><img src="svg/coolicon.svg" alt="coolicon"></div>
+                <div class='navbar__button'>
+                    <button class="button-nav">
+                        <p>Оформить заявку</p>
+                    </button>
+                </div>
+                <div class="navbar__icon">
+                    <div class="navbar__icon_login"><img class='login' src="svg/icon.svg" alt="icon"></div>
+                    <div class="navbar__icon_elem1"></div>
+                    <div class="navbar__icon_elem2"></div>
+                </div>
             </div>
-            <div class='navbar__button'>
-                <button class="button-nav"><p>Оформить заявку</p></button>
-            </div>
-            <div class="navbar__icon">
-                <div class="navbar__icon_login"><img  class='login' src="svg/icon.svg" alt="icon"></div>
-                <div class="navbar__icon_elem1"></div>
-                <div class="navbar__icon_elem2"></div>
-            </div>
-            </div>
-<!-- Форма регистрации -->
+            <!-- Форма регистрации -->
             <div class="navbar__form visible">
                 <div class="navbar__form_image">
-                <div class="navbar__form_section navbar__form_section_current" data-field="navbar__form_login">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="#CED6D9" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.8953 36.1583C28.7419 32.0723 18.8814 31.9044 10.5322 35.7758C7.70556 32.6134 5.97974 28.4527 5.97974 23.8817C5.97974 14.0025 14.0118 5.97041 23.891 5.97041C33.7701 5.97041 41.8022 14.0025 41.8022 23.8817C41.7929 28.63 39.9178 32.9492 36.8953 36.1583Z" />
-                        <path d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
-                    </svg>
-                    <p>Авторизация</p>
-                </div>
-                <div class="navbar__form_section" data-field="navbar__form_register">
-                    <svg width="66" height="48" viewBox="0 0 66 48" fill="#CED6D9" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.886 36.1583C28.7326 32.0723 18.8721 31.9044 10.5229 35.7758C7.69623 32.6134 5.97041 28.4527 5.97041 23.8817C5.97041 14.0025 14.0025 5.97041 23.8817 5.97041C33.7608 5.97041 41.7929 14.0025 41.7929 23.8817C41.7929 28.63 39.9178 32.9492 36.886 36.1583Z" />
-                        <path d="M56.8101 0.00933838C51.8401 0.00933838 47.8101 4.05015 47.8101 9.00933C47.8101 13.9685 51.8509 18.0093 56.8101 18.0093C61.7692 18.0093 65.8101 13.9685 65.8101 9.00933C65.8101 4.05015 61.7692 0.00933838 56.8101 0.00933838ZM61.3047 10.1438H57.9229V13.5255H55.6756V10.1438H52.2938V7.89649H55.6756V4.51474H57.9229V7.89649H61.3047V10.1438Z" />
-                        <path d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
-                    </svg>
-                    <p>Регистрация</p>
-                </div>
+                    <div class="navbar__form_section navbar__form_section_current" data-field="navbar__form_login">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="#CED6D9"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.8953 36.1583C28.7419 32.0723 18.8814 31.9044 10.5322 35.7758C7.70556 32.6134 5.97974 28.4527 5.97974 23.8817C5.97974 14.0025 14.0118 5.97041 23.891 5.97041C33.7701 5.97041 41.8022 14.0025 41.8022 23.8817C41.7929 28.63 39.9178 32.9492 36.8953 36.1583Z" />
+                            <path
+                                d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
+                        </svg>
+                        <p>Авторизация</p>
+                    </div>
+                    <div class="navbar__form_section" data-field="navbar__form_register">
+                        <svg width="66" height="48" viewBox="0 0 66 48" fill="#CED6D9"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.8817 0C10.7094 0 0 10.7094 0 23.8817C0 37.0539 10.7094 47.7633 23.8817 47.7633C37.0539 47.7633 47.7633 37.0539 47.7633 23.8817C47.7633 10.7094 37.0539 0 23.8817 0ZM36.886 36.1583C28.7326 32.0723 18.8721 31.9044 10.5229 35.7758C7.69623 32.6134 5.97041 28.4527 5.97041 23.8817C5.97041 14.0025 14.0025 5.97041 23.8817 5.97041C33.7608 5.97041 41.7929 14.0025 41.7929 23.8817C41.7929 28.63 39.9178 32.9492 36.886 36.1583Z" />
+                            <path
+                                d="M56.8101 0.00933838C51.8401 0.00933838 47.8101 4.05015 47.8101 9.00933C47.8101 13.9685 51.8509 18.0093 56.8101 18.0093C61.7692 18.0093 65.8101 13.9685 65.8101 9.00933C65.8101 4.05015 61.7692 0.00933838 56.8101 0.00933838ZM61.3047 10.1438H57.9229V13.5255H55.6756V10.1438H52.2938V7.89649H55.6756V4.51474H57.9229V7.89649H61.3047V10.1438Z" />
+                            <path
+                                d="M30.216 14.5622C33.7143 18.0605 33.7143 23.7324 30.216 27.2307C26.7177 30.729 21.0458 30.729 17.5475 27.2307C14.0493 23.7324 14.0493 18.0605 17.5475 14.5622C21.0458 11.0639 26.7177 11.0639 30.216 14.5622Z" />
+                        </svg>
+                        <p>Регистрация</p>
+                    </div>
                 </div>
 
                 <div class="navbar__form_login navbar__form_field">
@@ -68,7 +79,7 @@
                     </div>
                 </div>
                 <div class="navbar__form_register navbar__form_field">
-                    
+
                     <div class="navbar__form_elem">
                         <p>Имя*</p>
                         <form action="">
@@ -116,73 +127,41 @@
                 <img src="svg/logo.svg" alt="logo">
             </div>
             <div class="hide-for-desktop">
-            <div class="main-panel__menu">
-                <div id="menuToggle">
-                    <!--
+                <div class="main-panel__menu">
+                    <div id="menuToggle">
+                        <!--
                     A fake / hidden checkbox is used as click reciever,
                     so you can use the :checked selector on it.
                     -->
-                    <input type="checkbox" />
+                        <input class="check" type="checkbox" />
 
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-                    <ul id="menu">
-                      <a href="#"><li>Home</li></a>
-                      <a href="#"><li>About</li></a>
-                      <a href="#"><li>Info</li></a>
-                      <a href="#"><li>Contact</li></a>
-                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                    </ul>
-                  </div>
-            </div>
-            </div>
-            <div class="main-panel__link hide-for-mobile">
-                <a href="#">О школе</a>
-                <a href="#">Преподователи</a>
-                <a href="#">Студенты</a>
-                <a href="#">Расписание</a>
-                <a href="#">Программы</a>
-                <a href="#">Галерея</a>
-                <a href="#">Региональная Политика</a>
-            </div>
-            <div class="main-panel__search hide-for-mobile">
-                <form>
-                    <input type="text" placeholder="Я ищу">
-                    <button type="submit"><img src="svg/loop.svg"></button>
-                  </form>
-            </div>
-            <div class="main-panel__info hide-for-desktop">
-            <div class="main-panel__info_block">
-                <div class="main-panel__info_logo">
-                <img src="svg/logo.svg" alt="logo">
-                </div>
-                <div class="main-panel__info_search">
-                <form class="form">
-                    <div class="input__handler">
-                    <input class="search" type="text" placeholder="Я ищу">
+                        <ul id="menu">
+                            <li><img src="svg/logo.svg" alt="logo"></li>
+                            <li>
+                                <div class="main-panel__input">
+                                    <input type="text" placeholder="Я ищу" class="main-panel__input_white">
+                                    <img src="svg/loop.svg">
+                                </div>
+                            </li>
+                            <li><a href="#">О школе</a></li>
+                            <li><a href="#">Преподаватели</a></li>
+                            <li><a href="#">Студенты</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">Программы</a></li>
+                            <li><a href="#">Галерея</a></li>
+                            <li><a href="#">Региональная политика</a></li>
+                        </ul>
                     </div>
-                    <div class="button__handler">
-                    <button class="button" type="submit"><img src="svg/loop.svg"></button>
-                    </div>
-                </form>
-                </div>
-                <div class="main-panel__info_link">
-                <a href="#">О школе</a>
-                <a href="#">Преподователи</a>
-                <a href="#">Студенты</a>
-                <a href="#">Расписание</a>
-                <a href="#">Программы</a>
-                <a href="#">Галерея</a>
-                <a href="#">Региональная Политика</a>
                 </div>
             </div>
-        </div>
         </div>
     </header>
     <main>
-<!-- main block -->
+        <!-- main block -->
         <div class="main">
             <div class="main__image">
                 <div class="main__info main__info_swiper">
@@ -258,7 +237,7 @@
                                 <button>купить</button>
                             </div>
                         </div>
-                      </div>
+                    </div>
                     <div class="main__info_slides hide-for-mobile">
                     </div>
 
@@ -273,72 +252,74 @@
             <div class="main__image_text">
             </div>
         </div>
-<!-- main block -->
+        <!-- main block -->
     </main>
     <footer>
         <div class="footer">
             <div class="footer__grid">
-            <div class="footer__content hide-for-mobile">
-                <p>Школа вина</p>
-                <a href="#">О школе</a>
-                <a href="#">Преподователи</a>
-                <a href="#">Студенты</a>
-                <a href="#">Расписание</a>
-                <a href="#">Программы</a>
-                <a href="#">Галерея</a>
-                <a href="#">Региональная Политика</a>
-            </div>
-            <div class="footer__content hide-for-mobile">
-                <p>О школе</p>
-                <a href="#">О школе</a>
-                <a href="#">Преподователи</a>
-                <a href="#">Студенты</a>
-                <a href="#">Расписание</a>
-                <a href="#">Программы</a>
-                <a href="#">Галерея</a>
-                <a href="#">Региональная Политика</a>
-            </div>
-            <div class="footer__content footer__content_moscow">
-                <div>
-                <p class="title">Адрес в Москве</p>
-                <p>123007, 4-я Магистральная ул.,</p>
-                <p>д. 11, стр. 2, этаж 2</p>
+                <div class="footer__content hide-for-mobile">
+                    <p>Школа вина</p>
+                    <a href="#">О школе</a>
+                    <a href="#">Преподователи</a>
+                    <a href="#">Студенты</a>
+                    <a href="#">Расписание</a>
+                    <a href="#">Программы</a>
+                    <a href="#">Галерея</a>
+                    <a href="#">Региональная Политика</a>
                 </div>
-                <div>
-                <p class="title">Телефоны:</p>
-                <p>+7 495 510-52-74 </p>
-                    <p>добавочный 6317, 6302, 6305</p>
+                <div class="footer__content hide-for-mobile">
+                    <p>О школе</p>
+                    <a href="#">О школе</a>
+                    <a href="#">Преподователи</a>
+                    <a href="#">Студенты</a>
+                    <a href="#">Расписание</a>
+                    <a href="#">Программы</a>
+                    <a href="#">Галерея</a>
+                    <a href="#">Региональная Политика</a>
                 </div>
-                <div>
-                <p class="title">E-mail:</p>
-                <p>msk@enotria.ru</p>
-            </div>
-            </div>
-            <div class="footer__content footer__content_saintp">
-                <div>
-                <p class="title">Адрес в <span class="hide-for-mobile">Санкт-Петербурге</span> <span class="hide-for-desktop">СПб</span></p>
-                <p>пр. Добролюбова,<br class="hide-for-desktop"> 16А</p>
+                <div class="footer__content footer__content_moscow">
+                    <div>
+                        <p class="title">Адрес в Москве</p>
+                        <p>123007, 4-я Магистральная ул.,</p>
+                        <p>д. 11, стр. 2, этаж 2</p>
+                    </div>
+                    <div>
+                        <p class="title">Телефоны:</p>
+                        <p>+7 495 510-52-74 </p>
+                        <p>добавочный 6317, 6302, 6305</p>
+                    </div>
+                    <div>
+                        <p class="title">E-mail:</p>
+                        <p>msk@enotria.ru</p>
+                    </div>
                 </div>
-                <div>
-                <p class="title">Телефоны:</p>
-                <p>+7 812 363 25 16</p>
-                <p>+7 812 363 11 00</p>
+                <div class="footer__content footer__content_saintp">
+                    <div>
+                        <p class="title">Адрес в <span class="hide-for-mobile">Санкт-Петербурге</span> <span
+                                class="hide-for-desktop">СПб</span></p>
+                        <p>пр. Добролюбова,<br class="hide-for-desktop"> 16А</p>
+                    </div>
+                    <div>
+                        <p class="title">Телефоны:</p>
+                        <p>+7 812 363 25 16</p>
+                        <p>+7 812 363 11 00</p>
+                    </div>
+                    <div>
+                        <p class="title">E-mail:</p>
+                        <p>spb@enotria.ru</p>
+                    </div>
                 </div>
-                <div>
-                <p class="title">E-mail:</p>
-                <p>spb@enotria.ru</p>
-            </div>
-            </div>
             </div>
             <div class="footer__copyright">
                 <p>© 2021 Simple</p>
             </div>
         </div>
     </footer>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/libs.min.js"></script>
 </body>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/libs.min.js"></script>
+
 </html>

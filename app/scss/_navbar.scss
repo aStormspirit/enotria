@@ -53,8 +53,117 @@
     }
 }
 
+@include media(">desktop"){
+    .navbar{
+        margin: 0 120px;
+        min-height: 72px;
 
-@include media("<desktop"){
+            
+    .navbar__icon{
+        margin-left: 72px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .navbar__icon_login{
+            width: 24px;
+            height: 24px;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .navbar__icon_elem1{
+            @include icon(24px, 16px);
+            background-color: $black;
+        }
+
+        .navbar__icon_elem2{
+            @include icon(24px, 16px);
+            background-color: $red;
+        }
+    }
+
+
+        &__button{
+            margin-left: auto;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            .button-nav{
+                @include button(160px, 40px);
+                @include text-st-pc;
+            }
+        }
+    }
+
+    .navbar__city{
+        &_text{
+            @include text-st-pc;
+            letter-spacing: 0.07em;
+        }
+    }
+
+}
+
+@include media("<desktop", ">tablet"){
+    .navbar{
+        margin: 0 120px;
+        min-height: 72px;
+
+            
+    .navbar__icon{
+        margin-left: 72px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .navbar__icon_login{
+            width: 24px;
+            height: 24px;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .navbar__icon_elem1{
+            @include icon(24px, 16px);
+            background-color: $black;
+        }
+
+        .navbar__icon_elem2{
+            @include icon(24px, 16px);
+            background-color: $red;
+        }
+    }
+
+
+        &__button{
+            margin-left: auto;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            .button-nav{
+                @include button(160px, 40px);
+                @include text-st-pc;
+            }
+        }
+    }
+
+    .navbar__city{
+        &_text{
+            @include text-st-pc;
+            letter-spacing: 0.07em;
+        }
+    }
+
+}
+
+@include media("<tablet"){
     .navbar{
         margin-left: 2.4vh;
         min-height: 40px;
@@ -112,59 +221,4 @@
             @include text-st
         }
     }
-}
-
-@include media(">desktop"){
-    .navbar{
-        margin: 0 120px;
-        min-height: 72px;
-
-            
-    .navbar__icon{
-        margin-left: 72px;
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
-
-        .navbar__icon_login{
-            width: 24px;
-            height: 24px;
-            >img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .navbar__icon_elem1{
-            @include icon(24px, 16px);
-            background-color: $black;
-        }
-
-        .navbar__icon_elem2{
-            @include icon(24px, 16px);
-            background-color: $red;
-        }
-    }
-
-
-        &__button{
-            margin-left: auto;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-    
-            .button-nav{
-                @include button(160px, 40px);
-                @include text-st-pc;
-            }
-        }
-    }
-
-    .navbar__city{
-        &_text{
-            @include text-st-pc;
-            letter-spacing: 0.07em;
-        }
-    }
-
 }

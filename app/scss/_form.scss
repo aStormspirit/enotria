@@ -231,7 +231,32 @@
     display: none;
 }
 
-@include media("<desktop"){
+@include media(">desktop"){
+    .navbar__form{
+        width: 448px;
+        position: absolute;
+        background-color: #303233;
+        z-index: 400;
+        height: auto;
+        margin-left: 8px;
+        right: 200px;
+    }
+}
+
+@include media("<desktop", ">tablet"){
+    .navbar__form{
+        width: 448px;
+        position: absolute;
+        background-color: #303233;
+        z-index: 400;
+        height: auto;
+        margin-left: 8px;
+        right: 200px;
+    }
+}
+
+
+@include media("<tablet"){
     .navbar__form{
         width: 304px;
         position: absolute;
@@ -406,17 +431,3 @@
     }
     
 }
-
-
-@include media(">desktop"){
-    .navbar__form{
-        width: 448px;
-        position: absolute;
-        background-color: #303233;
-        z-index: 400;
-        height: auto;
-        margin-left: 8px;
-        right: 200px;
-    }
-}
-

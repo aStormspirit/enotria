@@ -1,32 +1,29 @@
-#menuToggle
-{
+#menuToggle {
     position: absolute;
     top: 10px;
     right: 15px;
-  display: block;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+    display: flex;
+    flex-direction: column;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #232323;
   
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
   color: tomato;
 }
 
 
-#menuToggle .check
-{
+#menuToggle .check {
   display: block;
   width: 32px;
   height: 32px;
@@ -45,8 +42,7 @@
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 21px;
   height: 2px;
@@ -62,7 +58,8 @@
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+              opacity 0.55s ease,
+              margin 0.5s ease;
 }
 
 #menuToggle span:first-child
@@ -84,6 +81,7 @@
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
+  margin: 5px 0 0;
 }
 
 /*
@@ -100,7 +98,7 @@
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(3.5px, -2.5px);
 }
 
 /*
@@ -113,10 +111,11 @@
   padding-top: 40px;
   z-index: 100;
   position: fixed;
-  width: 83%;
+  width: 264px;
   margin: 0;
   top: 0;
   left: 0;
+  bottom: 0;
   padding-bottom: 90px;
   
   background: #303233;
@@ -189,4 +188,10 @@
     width: 90%;
   }
   
+}
+
+@include media(">tablet"){
+  #menuToggle {
+    top: 15px;
+  }
 }

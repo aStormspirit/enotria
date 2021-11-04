@@ -32,38 +32,38 @@
             <div class="main-panel__logo">
                 <img src="svg/logo.svg" alt="logo">
             </div>
+            
             <div class="hide-for-desktop">
-            <div class="main-panel__menu">
-                <div id="menuToggle">
-                    <!--
+                <div class="main-panel__menu">
+                    <div id="menuToggle">
+                        <!--
                     A fake / hidden checkbox is used as click reciever,
                     so you can use the :checked selector on it.
                     -->
-                    <input type="checkbox" />
-                    
-                    <!--
-                    Some spans to act as a hamburger.
-                    
-                    They are acting like a real hamburger,
-                    not that McDonalds stuff.
-                    -->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    
-                    <!--
-                    Too bad the menu has to be inside of the button
-                    but hey, it's pure CSS magic.
-                    -->
-                    <ul id="menu">
-                      <a href="#"><li>Home</li></a>
-                      <a href="#"><li>About</li></a>
-                      <a href="#"><li>Info</li></a>
-                      <a href="#"><li>Contact</li></a>
-                      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                    </ul>
-                  </div>
-            </div>
+                        <input class="check" type="checkbox" />
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <ul id="menu">
+                            <li><img src="svg/logo.svg" alt="logo"></li>
+                            <li>
+                                <div class="main-panel__input">
+                                    <input type="text" placeholder="Я ищу" class="main-panel__input_white">
+                                    <img src="svg/loop.svg">
+                                </div>
+                            </li>
+                            <li><a href="#">О школе</a></li>
+                            <li><a href="#">Преподаватели</a></li>
+                            <li><a href="#">Студенты</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">Программы</a></li>
+                            <li><a href="#">Галерея</a></li>
+                            <li><a href="#">Региональная политика</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="main-panel__link hide-for-mobile">
                 <a href="#">О школе</a>

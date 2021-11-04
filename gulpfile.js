@@ -56,11 +56,13 @@ gulp.task('browser-sync', function () {
 
 gulp.task('html', function () {
   return gulp.src('app/*.html')
+  .pipe(gulp.dest('docs/'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('script', function () {
   return gulp.src('app/js/*.js')
+    .pipe(gulp.dest('docs/js'))
     .pipe(browserSync.reload({ stream: true }))
 });
 

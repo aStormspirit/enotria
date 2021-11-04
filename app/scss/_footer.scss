@@ -27,101 +27,6 @@ footer{
     }
 }
 
-@include media("<desktop"){
-    footer{
-        .footer{
-            margin: 24px 8px 8px;
-            padding-bottom: 8px;
-            background-color: $black;
-    
-            &__grid{
-                padding: 15px 16px 0;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 16px;
-            }
-
-            .footer__content_saintp,
-            .footer__content_moscow {
-                grid-gap: 20px;
-        
-                >div{
-                    >p{
-                        font-family: Roboto Condensed;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 12px;
-                        line-height: 24px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: $grey-light;
-                    }
-        
-                    >p:not(.title){    
-                        font-family: Roboto Condensed;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 12px;
-                        line-height: 24px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: $grey-light;
-                    }
-                }
-        
-                .title{
-                    color: white;
-                    border: none !important;
-                    font-family: Roboto Condensed;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                    margin-bottom: 10px;
-                }
-                
-                >div:nth-child(2),
-                >div:nth-child(3){
-                    max-width: 110px;
-                    margin-top: 22px;
-                    .title {
-                        font-size: 12px;
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        
-            .footer__content_saintp {
-                >div:first-child {
-                    margin-bottom: 45px;
-                }
-                >div:nth-child(2) {
-                    margin-bottom: 48px;
-                }
-            }
-    
-            &__copyright{
-                border-top: 1px solid #FFFFFF;
-                color: white;
-                margin: 31px 16px 0px;
-    
-                >p{
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 12px;
-                    line-height: 24px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                    margin: 0;
-                }
-            }
-        }
-    }
-}
-
 @include media(">desktop"){
 
     .footer__grid{
@@ -221,4 +126,205 @@ footer{
         }
     }
 
+}
+
+@include media("<desktop", ">tablet"){
+    footer{
+        .footer{
+            margin: 40px 32px 32px;
+        }    
+    }
+
+    .footer__grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 48px;
+    }
+
+    .footer__copyright{
+        margin-left: 64px;
+    }
+
+    .footer__content{
+        width: 256px;
+        margin: 39px 16px 0;
+        display: flex;
+        flex-direction: column;
+
+        >p {
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $white;
+            margin-bottom: 9px;
+        }
+        >a{
+            text-decoration: none;
+            font-family: Roboto Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $grey-light;
+        }
+    }
+
+    .footer__content_saintp,
+    .footer__content_moscow {
+        grid-gap: 20px;
+
+        >div{
+            >p{
+                color: #CED6D9;
+                font-family: Roboto Condensed;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $grey-light;
+            }
+
+            >p:not(.title){            
+                font-family: Roboto Condensed;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $grey-light;
+            }
+        }
+
+        .title{
+            color: white;
+            border: none !important;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        >div:nth-child(2),
+        >div:nth-child(3){
+            margin-top: 3px;
+            .title {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer__content_saintp {
+        >div:first-child {
+            margin-bottom: 0px;
+        }
+    }
+
+}
+
+@include media("<tablet"){
+    footer{
+        .footer{
+            margin: 24px 8px 8px;
+            padding-bottom: 8px;
+            background-color: $black;
+    
+            &__grid{
+                padding: 15px 16px 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 16px;
+            }
+
+            .footer__content_saintp,
+            .footer__content_moscow {
+                grid-gap: 20px;
+        
+                >div{
+                    >p{
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: $grey-light;
+                    }
+        
+                    >p:not(.title){    
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 24px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: $grey-light;
+                    }
+                }
+        
+                .title{
+                    color: white;
+                    border: none !important;
+                    font-family: Roboto Condensed;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+                
+                >div:nth-child(2),
+                >div:nth-child(3){
+                    max-width: 110px;
+                    margin-top: 22px;
+                    .title {
+                        font-size: 12px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        
+            .footer__content_saintp {
+                >div:first-child {
+                    margin-bottom: 45px;
+                }
+                >div:nth-child(2) {
+                    margin-bottom: 48px;
+                }
+            }
+    
+            &__copyright{
+                border-top: 1px solid #FFFFFF;
+                color: white;
+                margin: 31px 16px 0px;
+    
+                >p{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }

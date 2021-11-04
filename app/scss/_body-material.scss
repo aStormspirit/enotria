@@ -37,7 +37,94 @@
     }
 }
 
-@include media("<desktop"){
+@include media(">desktop"){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        & + .body__material {
+            margin-top: 96px;
+        }
+    }
+
+    .body__material{
+        display: grid;
+        grid-template-columns: 40px auto 40px;
+
+        >p{
+            width: 780px;
+            margin-left: 49px;
+            margin-top: -4px;
+        }
+
+        .hide-for-mobile {
+            width: 36.67px;
+            height: 40px;
+
+            >img{
+                width: 36.67px;
+                height: 40px;
+            }
+        }
+
+        .hide-for-mobile:last-child {
+            width: 41px;
+            height: 41px;
+
+            >img{
+                width: 41px;
+                height: 41px;
+            }
+        }
+    }
+}
+
+@include media("<desktop", ">tablet"){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        & + .body__material {
+            margin-top: 96px;
+        }
+    }
+
+    .body__material {
+        height: auto;
+        min-height: 88px;
+        margin: 32px 32px 0;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+
+        >p{
+            width: auto;
+            margin-left: 49px;
+            margin-top: -4px;
+        }
+
+        .hide-for-mobile {
+            width: 36.67px;
+            height: 40px;
+
+            >img{
+                width: 36.67px;
+                height: 40px;
+            }
+        }
+
+        .hide-for-mobile:last-child {
+            width: 41px;
+            height: 41px;
+
+            >img{
+                width: 41px;
+                height: 41px;
+            }
+        }
+    }
+}
+
+@include media("<tablet"){
     .wrapper{
         & + .body__material {
             margin-top: 40px;
@@ -78,48 +165,6 @@
             >img:last-child {
                 width: 24px;
                 height: 24px;
-            }
-        }
-    }
-}
-
-@include media(">desktop"){
-    .wrapper{
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-        & + .body__material {
-            margin-top: 96px;
-        }
-    }
-
-    .body__material{
-        display: grid;
-        grid-template-columns: 40px auto 40px;
-
-        >p{
-            width: 780px;
-            margin-left: 49px;
-            margin-top: -4px;
-        }
-
-        .hide-for-mobile {
-            width: 36.67px;
-            height: 40px;
-
-            >img{
-                width: 36.67px;
-                height: 40px;
-            }
-        }
-
-        .hide-for-mobile:last-child {
-            width: 41px;
-            height: 41px;
-
-            >img{
-                width: 41px;
-                height: 41px;
             }
         }
     }

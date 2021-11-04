@@ -36,8 +36,9 @@ $.each($pag_bullets, (key, val) => {
 })
   
 
-const $navbar__form_section = $('.navbar__form_section');
-const $navbar__form_field = $('.navbar__form_field');
+const $navbar__form_section = $('.navbar__form_section'),
+      $navbar__form_field = $('.navbar__form_field'),
+      $waiting_lists = $('.body__study').find('.list');
 $('.navbar__form_register').hide();
 
 $navbar__form_section.on('click', function(evt){
@@ -50,8 +51,33 @@ $navbar__form_section.on('click', function(evt){
 
 })
 
+$waiting_lists.on('click', function(evt) {
+    evt.preventDefault();
+    if(!$(this).closest('.wrapper').find('.body__form2').length) {
+        const $body__form2 = $('.body__form2').clone();
+
+        $(this).closest('.wrapper').append($body__form2);
+        $body__form2.addClass('open');
+
+        $body__form2.find('input').on('input', function() {
+            validation($(this));
+        });
+
+        $(document).on('click', docClickHandler);
+
+        function docClickHandler(evt) {
+            evt.preventDefault();
+
+            if(!$body__form2.closest('.wrapper').find('.body__study').find(evt.target).length) {
+                $body__form2.remove();
+                $('document').off('click', docClickHandler);
+            }
+        }
+    }
+})
+
 $('.navbar__form_elem').find('input').on('input', function() {
-    validation($(this))
+    validation($(this));
 });
 
 

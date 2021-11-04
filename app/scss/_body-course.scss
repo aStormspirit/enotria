@@ -399,8 +399,6 @@
 
 .body__form2{
     background-color: $grey-dark;
-    margin-left: 8px;
-    margin-right: 8px;
 
     .text{
         font-family: 'Roboto Condensed', sans-serif;
@@ -413,13 +411,6 @@
         color: $white;
         width: 50%;
         margin-top: 12px;
-    }
-
-    .body__form_area{
-
-        >p{
-        color: $white;
-        }
     }
 
     .body__form_footer{
@@ -543,6 +534,93 @@
 }
 
 @include media("<desktop"){
+    .wrapper {
+        .body__form2 {
+            max-width: 304px;
+            margin: 16px -16px 0;
+
+            &.open{
+                display: revert;
+                position: static;
+            }
+    
+            .body__form_waiting {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: stretch;
+            }
+        
+            .text{
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $white;
+                width: 50%;
+                margin: 12px 16px;
+            }
+        
+            .navbar__form_elem{
+    
+                > form {
+                    background-color: transparent;
+                    display: flex;
+                    height: 32px;
+                    align-items: center;
+                    margin-bottom: 17px;
+                    position: relative;
+                    
+                    >input {
+                        font-family: Roboto Condensed;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #303233;
+                        background-color: #edf1f2;
+                        border: none;
+                        width: 100%;
+                        
+                        &.error {
+                            border: 2px solid #9B0034;
+                            padding-left: 6px;
+                        }
+        
+                        &:focus {
+                            outline: none;
+                            border: 2px solid #9B0034;
+                            padding-left: 6px;
+                        }
+                    }
+
+                    >img {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+            
+            
+
+            .navbar__form_dropdown {
+                z-index: 1;
+
+                .drop {
+                    z-index: -1;
+                }
+            }
+
+            .body__form_footer{
+                margin-top: 16px;
+                height: 16px;
+                background-color: $red;
+            }
+        }
+    }
     .body__course{
         margin: 0 24px;
     
@@ -844,7 +922,6 @@
         }
     }
 
-
 }
 
 @include media(">desktop"){
@@ -1046,4 +1123,81 @@
             column-gap: 32px;
         }
     
+
+    
+    .body__form2{
+        width: 448px;
+        display: none;
+
+        &.open{
+            display: revert;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .body__form_waiting {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    
+        .text{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $white;
+            width: 50%;
+            margin: 19px 32px 22px;
+        }
+    
+        .body__form_area{
+            width: 100%;
+
+            > form {
+                background-color: transparent;
+                display: flex;
+                height: 32px;
+                align-items: center;
+                margin-bottom: 17px;
+                
+                >input {
+                    font-family: Roboto Condensed;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #303233;
+                    background-color: #edf1f2;
+                    border: none;
+                    width: 352px;
+                    height: 100%;
+                    padding: 0 0 0 8px;
+                    
+                    &.error {
+                        border: 2px solid #9B0034;
+                        padding-left: 6px;
+                    }
+    
+                    &:focus {
+                        outline: none;
+                        border: 2px solid #9B0034;
+                        padding-left: 6px;
+                    }
+                }
+            }
+        }
+    
+        .body__form_footer{
+            margin-top: 16px;
+            height: 16px;
+            background-color: $red;
+        }
+    }
 }

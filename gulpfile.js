@@ -9,8 +9,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 
 
-gulp.task('clean', async function () {
-  del.sync('docs')
+gulp.task('clean', function () {
+  return del("docs");
 })
 
 gulp.task('scss', function () {
@@ -22,7 +22,7 @@ gulp.task('scss', function () {
     }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.reload({ stream: true }))
 })
 
@@ -49,7 +49,7 @@ gulp.task('css', function () {
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: "app/"
+      baseDir: "docs/"
     }
   });
 });
@@ -64,7 +64,7 @@ gulp.task('script', function () {
     .pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('export', function () {
+gulp.task('export', async function () {
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('docs'));
 
@@ -82,11 +82,11 @@ gulp.task('export', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('app/*.html', gulp.parallel('html'))
-  gulp.watch('app/js/*.js', gulp.parallel('script'))
+  gulp.watch('app/scss/**/*.scss', gulp.series('scss'));
+  gulp.watch('app/*.html', gulp.series('html'))
+  gulp.watch('app/js/*.js', gulp.series('script'))
 });
 
-gulp.task('build', gulp.series('clean', 'export'))
+gulp.task('build', gulp.series( 'clean',  gulp.parallel('export', 'css', 'scss', 'js',)));
 
-gulp.task('default', gulp.parallel('css', 'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.series('build', gulp.parallel('browser-sync', 'watch')));

@@ -51,15 +51,15 @@
         }
     
         .button{
-            height: 24px;
 
             >button{
                 font-size: 14px;
                 line-height: 24px;
                 color: $white;
-                min-height: 24px;
+                height: 24px;
+                min-height: auto;
                 padding: 0;
-                background: none;
+                margin-bottom: 8px;
                 border: none;
                 width: 100%;
             }

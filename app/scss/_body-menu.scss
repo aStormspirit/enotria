@@ -1,14 +1,5 @@
-.body__menu{
-    background-color: $grey-light;
-    height: 40px;
-    margin: 0 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    
-    &_block_current {
-        background-color: black;
+@mixin current {
+    background-color: black;
 
         >p{
             color: white;
@@ -23,7 +14,16 @@
             bottom: -8px;
             transform: rotate(45deg);
         }
-    }
+}
+
+.body__menu{
+    background-color: $grey-light;
+    height: 40px;
+    margin: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 
     &_block{
         width: 256px;
@@ -44,6 +44,10 @@
         }
 
     }
+}
+
+.current{
+    @include current()
 }
 
 @include media(">desktop"){

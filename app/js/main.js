@@ -1,6 +1,6 @@
 const $form = $('.login')
 
-$form.on('click', ()=>{
+$form.on('click', () => {
     const $f = $('.navbar__form')
     $f.toggleClass('visible')
 })
@@ -10,18 +10,18 @@ const swiper = new Swiper('.main__info_swiper', {
     direction: 'horizontal',
     loop: true,
     speed: 700,
-  
+
     // If we need pagination
     pagination: {
-      el: '.main__info_slides',
-      bulletElement: 'p',
-      clickable: "true"
+        el: '.main__info_slides',
+        bulletElement: 'p',
+        clickable: "true"
     },
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: '.main__info_button_right',
-      prevEl: '.main__info_button_left',
+        nextEl: '.main__info_button_right',
+        prevEl: '.main__info_button_left',
     }
 });
 
@@ -31,17 +31,17 @@ $.each($pag_bullets, (key, val) => {
     if (key < 10) {
         val.innerHTML = '0' + (key + 1);
     } else {
-        val.innerHTML =  (key + 1);
+        val.innerHTML = (key + 1);
     }
 })
-  
+
 
 const $navbar__form_section = $('.navbar__form_section'),
-      $navbar__form_field = $('.navbar__form_field'),
-      $waiting_lists = $('.body__study').find('.list');
+    $navbar__form_field = $('.navbar__form_field'),
+    $waiting_lists = $('.body__study').find('.list');
 $('.navbar__form_register').hide();
 
-$navbar__form_section.on('click', function(evt){
+$navbar__form_section.on('click', function (evt) {
     evt.preventDefault();
 
     $navbar__form_field.hide();
@@ -51,16 +51,16 @@ $navbar__form_section.on('click', function(evt){
 
 })
 
-$waiting_lists.on('click', function(evt) {
+$waiting_lists.on('click', function (evt) {
     evt.preventDefault();
-    if(!$(this).closest('.wrapper').find('.body__form2').length) {
+    if (!$(this).closest('.wrapper').find('.body__form2').length) {
         const $waiting_list = $(this);
-              $body__form2 = $('.body__form2').clone();
+        $body__form2 = $('.body__form2').clone();
 
         $(this).closest('.wrapper').append($body__form2);
         $body__form2.addClass('open');
 
-        $body__form2.find('input').on('input', function() {
+        $body__form2.find('input').on('input', function () {
             validation($(this));
         });
 
@@ -69,7 +69,7 @@ $waiting_lists.on('click', function(evt) {
         function docClickHandler(evt) {
             evt.preventDefault();
 
-            if(!$body__form2.find(evt.target).length && !(evt.target == $waiting_list[0] || $waiting_list.find(evt.target).length)) {
+            if (!$body__form2.find(evt.target).length && !(evt.target == $waiting_list[0] || $waiting_list.find(evt.target).length)) {
                 $body__form2.remove();
                 $('document').off('click', docClickHandler);
             }
@@ -77,7 +77,7 @@ $waiting_lists.on('click', function(evt) {
     }
 })
 
-$('.navbar__form_elem').find('input').on('input', function() {
+$('.navbar__form_elem').find('input').on('input', function () {
     validation($(this));
 });
 
@@ -178,7 +178,7 @@ function validation($input) {
 
     function appendDropdown($input, text) {
         const $dropdown = $(' <div class="navbar__form_dropdown"> <p>Извините, но это поле обязательно к заполнению</p> <div class="drop"></div></div>'),
-              $text = $dropdown.find('p');
+            $text = $dropdown.find('p');
 
         $text.html(text);
         $('<img src="svg/false.svg" alt="ERR">').insertAfter($input);
@@ -186,3 +186,25 @@ function validation($input) {
         $dropdown.insertAfter($input.closest('.navbar__form_elem'));
     }
 }
+
+const bm = document.querySelector('.body__menu')
+
+console.log(bm.childNodes)
+
+bm.childNodes[1].addEventListener('click', () => {
+    bm.childNodes[1].classList.add("current")
+    bm.childNodes[3].classList.remove("current")
+    bm.childNodes[5].classList.remove("current")
+})
+
+bm.childNodes[3].addEventListener('click', () => {
+    bm.childNodes[1].classList.remove("current")
+    bm.childNodes[3].classList.add("current")
+    bm.childNodes[5].classList.remove("current")
+})
+
+bm.childNodes[5].addEventListener('click', () => {
+    bm.childNodes[1].classList.remove("current")
+    bm.childNodes[3].classList.remove("current")
+    bm.childNodes[5].classList.add("current")
+})
